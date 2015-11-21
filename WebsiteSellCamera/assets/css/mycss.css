@@ -1,0 +1,275 @@
+body{
+    background-color: lightgray;
+}
+
+body>img{
+    margin: -20px 0px 0px 0px;
+    width: 1349px;
+}
+
+/* CSS for Header */
+.navbar-inverse{
+    background-color: #336699;
+    border-radius: inherit;
+}
+
+.navbar-brand{
+    padding: 0px 0px 0px 10px;
+}
+
+.navbar-nav>.fa-shopping-cart{
+    color: white;
+    padding-top: 3px;
+    margin-right: 25px;
+}
+
+.navbar-nav .badge{
+    background-color: white;
+    color: red;
+    position: absolute;
+    z-index: 1;
+    margin: 12px 0px 0px 9px;
+}
+
+.fa-home{
+    color: white;
+}
+
+.button{
+    width: 80px;
+}
+
+.header-textbox{
+    width: 200px;
+}
+
+.header-textbox>.form-control{
+    padding: 6px 12px 6px 12px;
+}
+
+/* CSS for Footer */
+.footer .panel{
+    background: rgba(0, 0, 0, 0.8)!important;
+    color: white;
+    margin: 0px;
+}
+
+.footer .panel p>a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer .panel p>a:hover{
+    color: #00b2b3;
+}
+
+/* CSS for Body */
+#body{
+    margin-bottom: 15px;
+}
+
+.nav-pills{
+    background-color: #002266;
+}
+
+.nav-pills li{
+    margin: 0px !important;
+}
+
+.nav-pills>li>a{
+    color: white;
+    font-weight: bold;
+    border-radius: inherit;
+}
+
+.nav-pills>li>a:hover{
+    background-color: #00b2b3;
+}
+
+.nav-pills>li>a:visited, .nav-pills>li>a.dropdown-toggle:visited{
+    background-color: #00b2b3;
+}
+
+.nav-pills>li>a.forFA{
+    padding: 6px 15px 5px 15px;
+    height: 40px;
+}
+
+.list-group{
+    margin-top: 15px;
+}
+
+/* CSS for Left Menu */
+#left .list-group{
+    border: 1px solid;
+    border-color: gray;
+    border-radius: 5px;
+}
+
+#left .list-group .list-group-item{
+    border: 0px;
+    font-weight: bold;
+}
+
+#left .list-group a.list-group-item:hover{
+    background-color: #00b2b3;
+    color: white;
+}
+
+#left>.list-group>.list-group-item>p>a:hover{
+    text-decoration: none;
+    color: #00b2b3;
+}
+
+.list-group-item.title{
+    text-align: center;
+    background-color: #538cc5;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px !important;
+}
+
+.list-group-item>.badge{
+    background-color: white;
+    color: #336699;
+}
+
+.list-group-item.center{
+    text-align: center;
+}
+
+.list-group-item.center>p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.list-group-item.center>p.title{
+    background-color: #ff0000;
+    color: white;
+    font-weight: normal;
+}
+
+.list-group-item.center>p>.fa{
+    font-size: 30px;
+}
+
+.list-group-item.center>p>a{
+    color: black;
+    text-align: center;
+}
+
+.form-inline.navbar-right{
+    margin: 3px 15px 0px 0px;
+}
+
+/* CSS for Content Menu */
+#content>.list-group-item{
+    border: 0px;
+}
+
+#content>.list-group-item.content{
+    padding: 10px 0px 10px 0px;
+    background-color: lightgray;
+}
+
+#content>.list-group-item.title{
+    font-size: 25px;
+    background-color: #538cc5;
+}
+
+#content>.list-group-item.title>.badge{
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+#content>.list-group-item.title .badge:hover, #content>.list-group-item.title .badge:active, *
+#content>.list-group-item.title .badge:visited, #content>.list-group-item.title .badge>i{
+    color: #538cc5;
+}
+
+.carousel-inner>.item>div{
+    display: inline-block;
+    width: 193.156px;
+    border: 3px solid;
+    border-radius: 3px;
+    border-color: #006666;
+    padding: 20px 5px 20px 5px;
+    height: 300px;
+    font-size: 18px;
+    background-color: white;
+}
+
+#content .item{
+    text-align: center;
+}
+
+#content .item i{
+    font-size: 18px;
+}
+
+.name{
+    margin: 20px 0px 20px 0px;
+    font-weight: bold;
+}
+
+.price, .manufacturer{
+    padding: 5px 0px 5px 0px;
+    margin: 20px 0px 20px 0px;
+    color: white;
+}
+
+.price{
+    background-color: red;
+}
+
+.btnCart{
+    padding: 5px;
+    background-color: black;
+    border: 0px;
+    border-radius: 2px;
+    color: white;
+}
+
+.btnCart:hover{
+    background-color: #0033cc;
+}
+
+/* CSS for Register page */
+.reg-form{
+    margin-top: 15px;
+}
+
+.redColor{
+    color: red;
+}
+
+.reg-form .form-group{
+    margin-left: 45px;
+    margin-right: 46px;
+}
+
+.reg-form .form-group.reg-form-group{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.reg-input-group{
+    width: 400px;
+    margin: 0px 10px 0px 45px;
+    display: inline-block;
+}
+
+.reg-form>.panel, .reg-form>.panel.panel-primary>.panel-heading{
+    margin: 0px;
+    border-radius: 0px;
+}
+
+.btn-register{
+    text-align: center;
+}
+
+.btn-register>.btn{
+    width: 200px;
+    margin-top: 10px;
+    font-size: 20px;
+}
