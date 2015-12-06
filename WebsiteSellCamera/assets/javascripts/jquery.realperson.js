@@ -101,7 +101,7 @@
                         text += inst.options.chars.charAt(Math.floor(Math.random() * inst.options.chars.length));
 
                     }
-                    $('#defaultReal').val(text);
+                    $('#captcha').val(text);
                     inst.hash = hash(text + salt);
                     var self = this;
                     elem.closest('form').off('.' + inst.name)

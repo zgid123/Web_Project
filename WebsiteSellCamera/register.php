@@ -1,11 +1,10 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <!--
 To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/index-template.dwt.php" codeOutsideHTMLIsLocked="false" -->
     <head>
         <title>Index</title>
 
@@ -15,16 +14,14 @@ and open the template in the editor.
 
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-        <link href="assets/css/mycss.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/jquery.realperson.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/mycss.css" rel="stylesheet" type="text/css" />
     </head>
 
     <body>
         <div class="header" id="header">
             <nav class="navbar navbar-inverse">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="index.php"><i class="fa fa-home fa-3x"></i></a>
-
                     <a class="nav navbar-nav navbar-right" href="#"><span class="badge">0</span><i class="fa fa-shopping-cart fa-3x"></i></a>
 
                     <ul class="nav navbar-nav navbar-right">
@@ -60,15 +57,25 @@ and open the template in the editor.
             <div class="row">
                 <div class="col-md-12">
                     <ul class="nav nav-pills">
-                        <li class="active"><a id="productList" href="#">Sản phẩm</a></li>
-                        <li><a id="compactCamera" class="noactive" href="#">Máy ảnh Compact</a></li>
-                        <li><a id="dslrCamera" class="noactive" href="#">Máy ảnh DSLR</a></li>
-                        <li><a id="evilCamera" class="noactive" href="#">Máy ảnh EVIL</a></li>
-                        <li><a id="milcCamera" class="noactive" href="#">Máy ảnh MILC</a></li>
-                        <li><a id="canonCompany" class="noactive" href="#">Canon</a></li>
-                        <li><a id="fujiCompany" class="noactive" href="#">Fujifilm</a></li>
-                        <li><a id="nikonCompany" class="noactive" href="#">Nikon</a></li>
-                        <li><a id="sonyCompany" class="noactive" href="#">Sony</a></li>
+                        <li><a class="forFA" href="index.php"><i class="fa fa-home fa-2x"></i></a></li>
+                        <li><a id="productList" class="" href="#">Sản phẩm</a></li>
+                        <li><a id="compactCamera" class="" href="#">Máy ảnh Compact</a></li>
+                        <li><a id="dslrCamera" class="" href="#">Máy ảnh DSLR</a></li>
+                        <li><a id="evilCamera" class="" href="#">Máy ảnh Instant</a></li>
+                        <li><a id="milcCamera" class="" href="#">Máy ảnh MILC</a></li>
+                        <li class="dropdown">
+                            <a id="canonCompany" class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                Canon
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Series 1</a></li>
+                                <li><a href="#">Series 2</a></li>
+                                <li><a href="#">Series 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a id="fujiCompany" class="" href="#">Fujifilm</a></li>
+                        <li><a id="nikonCompany" class="" href="#">Nikon</a></li>
+                        <li><a id="sonyCompany" class="" href="#">Sony</a></li>
                         <form class="form-inline navbar-right">
                             <div class="input-group">
                                 <input type="text" class="form-control" placeholder="Tìm kiếm..." id="searchBar" />
@@ -121,12 +128,10 @@ and open the template in the editor.
                         <li class="list-group-item title">LOẠI SẢN PHẨM</li>
                         <a class="list-group-item" href="#">Máy ảnh Compact</a>
                         <a class="list-group-item" href="#">Máy ảnh DSLR</a>
-                        <a class="list-group-item" href="#">Máy ảnh EVIL</a>
+                        <a class="list-group-item" href="#">Máy ảnh Instant</a>
                         <a class="list-group-item" href="#">Máy ảnh MILC</a>
                         <li class="list-group-item title">HÃNG SẢN XUẤT</li>
-                        <a class="list-group-item" href="#">
-                            Canon<span class="badge"><i class="fa fa-chevron-circle-right"></i></span>
-                        </a>
+                        <a class="list-group-item" href="#">Canon<span class="badge"><i class="fa fa-chevron-circle-right"></i></span></a>
                         <a class="list-group-item" href="#">Fujifilm<span class="badge"><i class="fa fa-chevron-circle-right"></i></span></a>
                         <a class="list-group-item" href="#">Nikon<span class="badge"><i class="fa fa-chevron-circle-right"></i></span></a>
                         <a class="list-group-item" href="#">Sony<span class="badge"><i class="fa fa-chevron-circle-right"></i></span></a>
@@ -193,7 +198,7 @@ and open the template in the editor.
                                 <div class="form-group reg-form-group">
                                     <div class="input-group reg-input-group">
                                         <label>Mã xác nhận</label>
-                                        <input type="hidden" id="defaultReal"
+                                        <input type="hidden" id="captcha"
                                                name="captcha" />
                                     </div>
                                     <div class="input-group reg-input-group">
@@ -257,11 +262,7 @@ and open the template in the editor.
         <script src="assets/javascripts/bootstrap.min.js" type="text/javascript"></script>
         <script src="assets/javascripts/jquery.plugin.js" type="text/javascript"></script>
         <script src="assets/javascripts/jquery.realperson.js" type="text/javascript"></script>
-        <script>
-            $(function () {
-                $('#defaultReal').realperson();
-            });
-        </script>
+        <script src="assets/javascripts/myjavascript.js" type="text/javascript"></script>
     </body>
-
+    <!-- InstanceEnd -->
 </html>
