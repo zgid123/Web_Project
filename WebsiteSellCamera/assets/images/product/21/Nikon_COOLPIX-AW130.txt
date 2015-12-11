@@ -1,0 +1,22 @@
+﻿Nikon-COOLPIX-AW130 - Chụp ảnh chất lượng cao chưa bao giờ dễ dàng đến thế. 8900000
+Độ phân giải máy ảnh	16.1 megapixel
+Bộ xử lý máy ảnh	-
+Cảm biến hình ảnh	 CCD loại 1/2,3 inch; tổng cộng khoảng 16,44 triệu điểm ảnh
+Ống kính 	Thấu kính NIKKOR với thu phóng quang 5x
+Tiêu cự	4,6-23,0 mm (góc xem tương đương với thấu kính 26-130 mm ở định dạng 35mm [135])
+Khẩu độ	f/3.2-6.5
+Độ nhạy ISO	ISO 80-1600
+Zoom quang học	5x
+Zoom kỹ thuật số	Lên đến 4x (góc xem tương đương với thấu kính khoảng 520 mm ở định dạng 35mm [135])
+Màn hình 	Màn hình tinh thể lỏng TFT  khoảng 230 điểm k, có điều chỉnh độ sáng 5 mức
+Kích thước màn hình	6,7 cm (2,7 inch)
+Cân bằng trắng	 
+Quay phim 	HD 720p (cài đặt mặc định): 1280 x 720/16:9, VGA: 640 x 480/4:3, QVGA: 320 x 240/4:3 *Tỷ lệ khung hình là khoảng 30 fps (khung hình/giây) không phụ thuộc vào tùy chỉnh phim được thiết lập.
+Định dạng quay phim	AVI
+Bộ nhớ trong 	Khoảng 20 MB
+Thẻ nhớ tương thích	SD/SDHC/SDXC
+Cổng kết nối	AV, USB
+Pin	Hai pin alkaline LR6/L40 (cỡ AA), Hai pin lithium FR6/L91 (cỡ AA), Hai pin sạc Ni-MH EN-MH2 (bán riêng), Bộ đổi điện AC EH-65A (bán riêng)
+Kích thước:	96,4 x 59,4 x 28,9 mm
+Khối Lượng:	160 g
+Màu sắc	Đen, tím, bạc, xanh

@@ -1,0 +1,26 @@
+﻿Sony-ILCE-7S 24.3MP (màu Đen) với ống kính SELP1650 15990000
+Độ phân giải máy ảnh	24.3 Megapixel
+Bộ xử lý máy ảnh	BIONZ X™
+Cảm biến hình ảnh	Cảm biến APS-C (23.5 x 15.6mm), Exmor CMOS
+Ống kính	Ống kính Sony E-mount
+Tiêu cự	16-50 mm
+Khẩu độ	-
+Độ nhạy ISO	Ảnh tĩnh: ISO 100-25600, TỰ ĐỘNG (ISO 100-25600, có thể chọn giới hạn thấp hơn và cao hơn), Phim: tương đương ISO 100-12800, TỰ ĐỘNG (tương đương ISO 100-12800, có thể chọn giới hạn thấp hơn và cao hơn)
+Màn hình	TFT LCD   921,600 điểm ảnh
+Kích thước màn hình	3 inch
+Tính năng màn hình	Màn hình cảm ứng, góc điều chỉnh 180 độ,  WhiteMagic,  Hiển thị điều chình hình ảnh thực tế, Zebra,  Peaking MF
+Các kiểu hiển thị	Hiển thị đồ họa / Hiển thị tất cả thông tin / Không hiển thị Thông tin / Biểu đồ
+Tốc độ màn trập	Ảnh tĩnh:1/4000 đến 30 giây, Bulb, Movies: 1/4000 đến 1/4 (1/3 bước)(lên đến 1/60 ở chế độ AUTO (lên đến 1/30 ở chế độ Auto slow shutter))
+Cân bằng trắng	Tự động/ Ban ngày / Bóng râm/ Nhiều mây/ Ánh sáng chói/ Đèn huỳnh quang (Trắng ấm / Trắng lạnh / Trắng sáng ban ngày / Ánh sáng ban ngày)/ Flash/ Dưới Nước/ Nhiệt độ màu (2500 đến 9900K) & Bộ lọc màu (G7 đến M7(15-step), A7 đến B7(15-step))/ Tùy chỉnh
+Chụp ảnh bù sáng	3 khung hình, có thể lựa chọn Cao/Thấp
+Quay phim 	Full HD XAVC S
+Định dạng quay phim	XAVC S, AVCHDVer. 2.0, MP4
+Bộ nhớ trong	-
+Thẻ nhớ tương thích	Memory Stick PRO Duo, Memory Stick PRO-HG Duo, Memory Stick XC-HG Duo, SD, SDHC (UHS-I compliant), SDXC (UHS-I compliant)
+Các đặc tính khác	Chức năng nhận diện nụ cười,  Chạm để chụp,  Chạm để lấy nét,  Hẹn giờ tự chụp chân dung,  PlayMemories Camera Apps,  Hướng dẫn chụp ảnh,  Hướng dẫn sử dụng,  Chức năng khóa, cài đặt,  Vùng cài đặt,  Chế độ ở Shop,  Eye-Fi ready.
+Phụ kiện đi kèm	Nắp đậy ống kính,  Dây nguồn,  Pin sạc NP-FW50,  AC Adaptor AC-UB10,  Dây đeo,  Dây Micro USB
+Cổng kết nối	AV / USB / WIFI / NFC
+Loại pin	Pin sạc NP-FW50
+Kích thước	109.6 x 62.8 x 35.7 mm
+Khối Lượng	283 g
+Màu sắc	Đen

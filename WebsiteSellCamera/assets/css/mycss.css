@@ -12,12 +12,12 @@ body>img{
 }
 
 #back-to-top{
-    font-size: 65px;
+    font-size: 55px;
     text-decoration: none;
     z-index: 2;
     position: fixed;
-    right: 0;
-    bottom: 0;
+    right: 5px;
+    bottom: 5px;
     display: none;
     color: #009999;
 }
@@ -36,10 +36,32 @@ body>img{
     padding: 0px 0px 0px 10px;
 }
 
+button.nav.navbar-nav.navbar-right, button.nav.navbar-nav.navbar-right:hover, 
+button.nav.navbar-nav.navbar-right:visited{
+    background-color: inherit !important;
+    outline: none;
+}
+
+button.nav.navbar-nav.navbar-right{
+    border: 0px;
+    height: 50px;
+}
+
 .navbar-nav>.fa-shopping-cart{
     color: white;
-    padding-top: 3px;
-    margin-right: 25px;
+    padding-right: 5px;
+}
+
+.navbar.navbar-inverse .dropdown{
+    z-index:2;
+    position: absolute;
+    padding: 0px;
+}
+
+.navbar.navbar-inverse .dropdown>.dropdown-menu{
+    border-radius: 0px;
+    text-align: center;
+    padding: 10px;
 }
 
 .navbar-nav .badge{
@@ -47,7 +69,7 @@ body>img{
     color: red;
     position: absolute;
     z-index: 1;
-    margin: 12px 0px 0px 9px;
+    margin: 9px 0px 0px 9px;
 }
 
 .fa-home{
@@ -278,16 +300,30 @@ body>img{
     background-color: red;
 }
 
-.btnCart{
+.addCart{
     padding: 5px;
-    background-color: black;
+    background-color: #336699;
     border: 0px;
     border-radius: 2px;
     color: white;
 }
 
-.btnCart:hover{
+.addCart:hover{
     background-color: #0033cc;
+}
+
+.btnDetail{
+    color: #ff0000;
+    position: absolute;
+    display: none;
+}
+
+.btnDetail>.fa-search-plus{
+    font-size: 50px !important;
+}
+
+.btnDetail:hover{
+    color: #0033cc;
 }
 
 /* CSS for Register page */

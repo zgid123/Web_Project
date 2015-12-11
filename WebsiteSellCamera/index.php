@@ -50,6 +50,9 @@ and open the template in the editor.
                         case "register":
                             include_once("include/incRegister.php");
                             break;
+                        case "product":
+                            include_once("include/incProduct.php");
+                            break;
                         default:
                             include_once("include/incHome.php");
                     }
@@ -71,6 +74,7 @@ and open the template in the editor.
         <script src="assets/javascripts/myJavascript.js" type="text/javascript"></script>
         <script src="assets/javascripts/myRegisterJavascript.js" type="text/javascript"></script>
         <script src="assets/javascripts/myMenuJavascript.js" type="text/javascript"></script>
+        <script src="assets/javascripts/myHomeJavascript.js" type="text/javascript"></script>
     </body>
     <!-- InstanceEnd -->
 </html>

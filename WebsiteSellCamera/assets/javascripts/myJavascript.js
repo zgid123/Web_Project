@@ -13,4 +13,22 @@ $("body").ready(function () {
             scrollTop: 0
         }, 500);
     });
+
+    $("button.nav.navbar-nav.navbar-right").mousemove(function () {
+        var next = $(this).next();
+        var top = $(this).height();
+        next.addClass("open");
+        next.css({
+            "right": 0,
+            "top": top
+        });
+    });
+
+    $("button.nav.navbar-nav.navbar-right").mouseout(function () {
+        $(this).next().removeClass("open");
+    });
+
+    $(".navbar navbar-inverse .dropdown").mouseout(function () {
+        $(this).removeClass("open");
+    });
 });

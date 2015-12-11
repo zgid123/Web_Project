@@ -1,0 +1,23 @@
+﻿Nikon-D5300 - máy ảnh kế thừa tri tuệ cao 17500000
+Độ phân giải máy ảnh	16 megapixel
+Bộ xử lý máy ảnh	-
+Cảm biến hình ảnh	CMOS loại 1/2,3 inch; tổng cộng khoảng 16,79 triệu điểm ảnh
+Ống kính 	NIKKOR
+Tiêu cự	4,0-136 mm (góc xem tương đương với thấu kính 22,5-765 mm ở định dạng 35mm [135])
+Khẩu độ	f/3-5.9
+Độ nhạy ISO	ISO 125-1600 ISO 3200 (khả dụng khi sử dụng Chế độ tự động)
+Zoom quang học	34x
+Zoom kỹ thuật số	4x
+Màn hình 	Màn hình tinh thể lỏng TFT, hoảng 921 điểm k (RGBW), góc xem rộng với lớp phủ chống phản chiếu và điều chỉnh độ sáng 6 mức, có thể nghiêng xuống khoảng 85°, nghiêng lên khoảng 90°
+Kích thước màn hình	3 inch
+Cân bằng trắng	-
+Quay phim 	Full HD 1080p
+Định dạng quay phim	MOV 
+Bộ nhớ trong 	59 MB
+Thẻ nhớ tương thích	SD/SDHC/SDXC
+Cổng kết nối	AV, USB, micro HDMI
+Pin	pin alkaline LR6/L40 (cỡ AA), Pin lithium FR6/L91 (cỡ AA)
+Kích thước:	111 x 75.8 x 91.2 mm 
+Khối Lượng:	508 g
+Phụ kiện kèm theo	Dây Máy ảnh, pin alkaline LR6/L40 (cỡ AA) (x4), Nắp Thấu kính LC-CP28 (có dây), Cáp USB UC-E16
+Màu sắc	Đen

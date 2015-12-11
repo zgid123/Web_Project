@@ -8,39 +8,41 @@
         <div id="carousel-top-10" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="item active">
-                    <div>
+                    <div class="product">
+                        <a class="btnDetail" href="#"><i class="fa fa-search-plus"></i></a>
                         <img class="img-reponsive" src="assets/images/product/DSLR/alpha77ii.jpg" alt=""/>
                         <div id="productName" class="name">Sản phẩm 1</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
 
-                    <div>
+                    <div class="product">
+                        <a class="btnDetail" href="#"><i class="fa fa-search-plus"></i></a>
                         <img class="" src="assets/images/product/MILC/alphanex5.jpg" alt=""/>
                         <div id="productName" class="name">Sản phẩm 2</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
 
                     <div>
                         <img src="assets/images/product/compact/dscw350.jpg" alt=""/>
                         <div id="productName" class="name">Sản phẩm 3</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
 
                     <div>
                         <img src="assets/images/product/INSTAX/instaxmini8.jpg" alt=""/>
                         <div id="productName" class="name">Sản phẩm 4</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
 
                     <div>
                         <img src="assets/images/product/INSTAX/minstaxmini90.jpg" alt=""/>
                         <div id="productName" class="name">Sản phẩm 5</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
                 </div>
 
@@ -49,35 +51,35 @@
                         <img class="img-thumbnail" src="assets/images/logo/canon.png" alt=""/>
                         <div id="productName" class="name">Sản phẩm 6</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
 
                     <div>
                         <img class="img-thumbnail" src="assets/images/logo/canon.png" alt=""/>
                         <div id="productName" class="name">Sản phẩm 7</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
 
                     <div>
                         <img class="img-thumbnail" src="assets/images/logo/canon.png" alt=""/>
                         <div id="productName" class="name">Sản phẩm 8</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
 
                     <div>
                         <img class="img-thumbnail" src="assets/images/logo/canon.png" alt=""/>
                         <div id="productName" class="name">Sản phẩm 9</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
 
                     <div>
                         <img class="img-thumbnail" src="assets/images/logo/canon.png" alt=""/>
                         <div id="productName" class="name">Sản phẩm 10</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
                 </div>
             </div>
@@ -97,35 +99,35 @@
                         <img class="img-thumbnail" src="assets/images/logo/canon.png" alt=""/>
                         <div id="productName" class="name">Sản phẩm 1</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
 
                     <div>
                         <img class="img-thumbnail" src="assets/images/logo/canon.png" alt=""/>
                         <div id="productName" class="name">Sản phẩm 2</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
 
                     <div>
                         <img class="img-thumbnail" src="assets/images/logo/canon.png" alt=""/>
                         <div id="productName" class="name">Sản phẩm 3</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
 
                     <div>
                         <img class="img-thumbnail" src="assets/images/logo/canon.png" alt=""/>
                         <div id="productName" class="name">Sản phẩm 4</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
 
                     <div>
                         <img class="img-thumbnail" src="assets/images/logo/canon.png" alt=""/>
                         <div id="productName" class="name">Sản phẩm 5</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
                 </div>
 
@@ -134,35 +136,35 @@
                         <img class="img-thumbnail" src="assets/images/logo/canon.png" alt=""/>
                         <div id="productName" class="name">Sản phẩm 6</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
 
                     <div>
                         <img class="img-thumbnail" src="assets/images/logo/canon.png" alt=""/>
                         <div id="productName" class="name">Sản phẩm 7</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
 
                     <div>
                         <img class="img-thumbnail" src="assets/images/logo/canon.png" alt=""/>
                         <div id="productName" class="name">Sản phẩm 8</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
 
                     <div>
                         <img class="img-thumbnail" src="assets/images/logo/canon.png" alt=""/>
                         <div id="productName" class="name">Sản phẩm 9</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
 
                     <div>
                         <img class="img-thumbnail" src="assets/images/logo/canon.png" alt=""/>
                         <div id="productName" class="name">Sản phẩm 10</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
                 </div>
             </div>
@@ -182,35 +184,35 @@
                         <img class="img-thumbnail" src="assets/images/logo/canon.png" alt=""/>
                         <div id="productName" class="name">Sản phẩm 1</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
 
                     <div>
                         <img class="img-thumbnail" src="assets/images/logo/canon.png" alt=""/>
                         <div id="productName" class="name">Sản phẩm 2</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
 
                     <div>
                         <img class="img-thumbnail" src="assets/images/logo/canon.png" alt=""/>
                         <div id="productName" class="name">Sản phẩm 3</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
 
                     <div>
                         <img class="img-thumbnail" src="assets/images/logo/canon.png" alt=""/>
                         <div id="productName" class="name">Sản phẩm 4</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
 
                     <div>
                         <img class="img-thumbnail" src="assets/images/logo/canon.png" alt=""/>
                         <div id="productName" class="name">Sản phẩm 5</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
                 </div>
 
@@ -219,35 +221,35 @@
                         <img class="img-thumbnail" src="assets/images/logo/canon.png" alt=""/>
                         <div id="productName" class="name">Sản phẩm 6</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
 
                     <div>
                         <img class="img-thumbnail" src="assets/images/logo/canon.png" alt=""/>
                         <div id="productName" class="name">Sản phẩm 7</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
 
                     <div>
                         <img class="img-thumbnail" src="assets/images/logo/canon.png" alt=""/>
                         <div id="productName" class="name">Sản phẩm 8</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
 
                     <div>
                         <img class="img-thumbnail" src="assets/images/logo/canon.png" alt=""/>
                         <div id="productName" class="name">Sản phẩm 9</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
 
                     <div>
                         <img class="img-thumbnail" src="assets/images/logo/canon.png" alt=""/>
                         <div id="productName" class="name">Sản phẩm 10</div>
                         <div id="productPrice" class="price">1,900,000 VNĐ</div>
-                        <button id="addCart" class="btnCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
+                        <button id="addCart" class="addCart"><i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i></button>
                     </div>
                 </div>
             </div>

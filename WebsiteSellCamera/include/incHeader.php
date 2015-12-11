@@ -1,8 +1,13 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
-        <a class="nav navbar-nav navbar-right" href="#">
-            <span class="badge">0</span><i class="fa fa-shopping-cart fa-3x"></i>
-        </a>
+        <button class="nav navbar-nav navbar-right">
+            <span class="badge"><b>0</b></span><i class="fa fa-shopping-cart fa-3x"></i>
+        </button>
+        <div class="dropdown">
+            <ul class="dropdown-menu pull-right">
+                Chưa có sản phẩm
+            </ul>
+        </div>
 
         <ul class="nav navbar-nav navbar-right">
             <li><a href="?action=register" id="register">Đăng ký</a></li>

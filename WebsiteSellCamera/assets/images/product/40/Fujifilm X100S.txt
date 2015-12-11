@@ -1,0 +1,35 @@
+﻿Fujifilm X100S đối thủ đáng gờm cho các dòng máy 25.000.000
+Kiểu máy	Cao cấp
+Độ phân giải	16.3 megapixels
+Định dạng cảm biến	CMOS EXR II
+Kích thước cảm biến	APS-C (23.6 x 15.8 mm)
+Zoom quang	1×
+Zoom số	Không
+Dải tiêu cự	N/A
+Độ mở ống kính	F2.0
+Độ nhạy sáng ISO	Auto (ISO 200 - 6400), ISO 100, 12800 and 25600
+Chống rung	Có
+Lấy nét tự động	Có
+Lấy nét tay	Có
+Chế độ Marco	10 cm (3.94″)
+Tốc độ chập nhỏ nhất	30s
+Tốc độ chập lớn nhất	1/4000 sec
+Đèn flash trong	Có
+Khoảng hoạt động của đèn	9 m
+Đèn flash ngoài	Có hỗ trợ
+Chế độ bù sáng	±2 (at 1/3 EV steps)
+Chế độ đo sáng	Multi Average Spot
+Chế độ ưu tiên khẩu độ	Có
+Chế độ ưu tiên độ chập	Có
+Ống kính tương thích	Không
+Tốc độ chụp liên tục	6 hình/s
+Chế độ quay phim	Full HD 1920 x 1080 (60, 30, 25, 24 fps)
+Định dạng thẻ nhớ	SD/SDHC/SDXC
+Bộ nhớ trong	Không
+Định dạng file ảnh thô	H.264
+Khe ngắm quang học	Có (Đô. bao phủ 90%)
+Kích thước màn hình LCD	2.8 "
+Độ phân giải màn hình LCD	460,000 điểm ảnh
+Chế độ ngắm ảnh sống	Có
+Kiểu pin	Lithium-Ion NP-95 rechargeable battery & charger
+Trọng lượng (bao gồm pin)	445 g (0.98 lb / 15.70 oz)
