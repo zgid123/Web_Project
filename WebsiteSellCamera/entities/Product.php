@@ -15,7 +15,7 @@ require_once 'Utils/DataProvider.php';
 
 class Product {
 
-    var $ProID, $ProName, $URL, $ShortDes, $FullDes, $Price, $Quantity, $Bought, $Viewed, $UploadDate;
+    var $ProID, $ProName, $URL, $TinyDes, $FullDes, $Price, $Quantity, $Bought, $Viewed, $UploadDate;
 
     public function getProID() {
         return $this->ProID;
@@ -29,8 +29,8 @@ class Product {
         return $this->URL;
     }
 
-    public function getShortDes() {
-        return $this->ShortDes;
+    public function getTinyDes() {
+        return $this->TinyDes;
     }
 
     public function getFullDes() {
@@ -69,8 +69,8 @@ class Product {
         $this->URL = $url;
     }
 
-    public function setShortDes($shortDes) {
-        $this->ShortDes = $shortDes;
+    public function setTinyDes($shortDes) {
+        $this->TinyDes = $shortDes;
     }
 
     public function setFullDes($fullDes) {
@@ -97,13 +97,26 @@ class Product {
         $this->UploadDate = $date;
     }
 
-    public static function getProduct($query = "Select ProID, ProName, URL, ShortDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate From products") {
+    public function __construct($id, $name, $url, $tinyDes, $fullDes, $price, $quantity, $bought, $viewd, $uploadDate) {
+        $this->ProID = $id;
+        $this->ProName = $name;
+        $this->URL = $url;
+        $this->TinyDes = $tinyDes;
+        $this->FullDes = $fullDes;
+        $this->Price = $price;
+        $this->Quantity = $quantity;
+        $this->Bought = $bought;
+        $this->Viewed = $viewd;
+        $this->UploadDate = $uploadDate;
+    }
+
+    public static function getProduct($query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate From products") {
         $result = array();
 
-        $category = DataProvider::ExecuteQuery($query);
+        $product = DataProvider::ExecuteQuery($query);
 
-        while ($row = $category->fetch_assoc()) {
-            array_push($result, new Category($row["CatID"], $row["CatName"]));
+        while ($row = $product->fetch_assoc()) {
+            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"]));
         }
 
         return $result;

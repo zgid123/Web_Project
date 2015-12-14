@@ -142,12 +142,12 @@ button.nav.navbar-nav.navbar-right{
 }
 
 .nav-pills>li>a:hover, .nav-pills>li>ul.dropdown-menu>li>a:hover{
-    background-color: #00b2b3;
+    background-color: #00b2b3 !important;
     color: white;
 }
 
 .nav-pills>li>a:visited, .nav-pills>li.dropdown>a:visited{
-    background-color: #00b2b3;
+    background-color: #00b2b3 !important;
 }
 
 .nav-pills>li>a.forFA{
@@ -265,7 +265,7 @@ button.nav.navbar-nav.navbar-right{
     color: #538cc5;
 }
 
-.carousel-inner>.item>div{
+div.product{
     display: inline-block;
     width: 193.156px;
     border: 3px solid;
@@ -277,6 +277,18 @@ button.nav.navbar-nav.navbar-right{
     background-color: white;
 }
 
+div.product>.productName{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+    margin: 10px 0px 20px 0px;
+    font-weight: bold;
+}
+
+div.product>.productName>p{
+    position: relative;
+}
+
 #content .item{
     text-align: center;
 }
@@ -285,18 +297,10 @@ button.nav.navbar-nav.navbar-right{
     font-size: 18px;
 }
 
-.name{
-    margin: 20px 0px 20px 0px;
-    font-weight: bold;
-}
-
-.price, .manufacturer{
+.price{
     padding: 5px 0px 5px 0px;
     margin: 20px 0px 20px 0px;
     color: white;
-}
-
-.price{
     background-color: red;
 }
 

@@ -17,7 +17,7 @@ $("#content").ready(function () {
             "z-index": 3
         });
         notice.fadeIn(400);
-        var message = "Đã thêm " + $(this).parent().children(".name").text() + " vào giỏ hàng";
+        var message = "Đã thêm " + $(this).parent().children(".productName").text() + " vào giỏ hàng";
         notice.text(message);
         setTimeout(function () {
             $("#notice").remove();
@@ -38,5 +38,19 @@ $("#content").ready(function () {
 
     $(".product").mouseout(function () {
         $(this).children(".btnDetail").hide();
+    });
+
+    $(".productName>p").mouseover(function () {
+        var text = $(this).text();
+        if (text.length * 10 > $(this).width())
+            $(this).animate({
+                right: Math.abs($(this).text().length * 8 - $(this).width())
+            }, 600);
+    });
+
+    $(".productName>p").mouseout(function () {
+        $(this).animate({
+            right: 0
+        }, 600);
     });
 });
