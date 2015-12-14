@@ -1,7 +1,7 @@
 <?php
 
 define("SERVER", "localhost");
-define("DB", "banmayanh");
+define("DB", "dulieumayanh");
 define("UID", "root");
 define("PWD", "");
 
@@ -25,5 +25,3 @@ class DataProvider {
     }
 
 }
-
-?>
