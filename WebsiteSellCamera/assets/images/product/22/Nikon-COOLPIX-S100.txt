@@ -1,0 +1,26 @@
+﻿Nikon-COOLPIX-S100 - phát huy khả năng chụp hình 3999000
+Độ phân giải máy ảnh	16.0 megapixel
+Bộ xử lý máy ảnh	-
+Cảm biến hình ảnh	CCD loại 1/2,3 inch; tổng số điểm ảnh: khoảng 20,48 triệu
+Ống kính 	NIKKOR
+Tiêu cự	4,6-23,0 mm (góc xem tương đương với thấu kính 26-130 mm ở định dạng 35mm [135])
+Khẩu độ	 f/3.2-6.5
+Độ nhạy ISO	ISO 80-1600 ISO 3200 (khả dụng khi sử dụng Chế độ tự động)
+Zoom quang học	5x
+Zoom kỹ thuật số	4x
+Màn hình 	Màn hình tinh thể lỏng TFT, khoảng 230 điểm k và điều chỉnh độ sáng 5 mức
+Kích thước màn hình	2,8 inch
+Cân bằng trắng	-
+Quay phim 	HD 720p
+Định dạng quay phim	WAV: AVI (Phù hợp JPEG chuyển động)
+Bộ nhớ trong 	32 MB
+Thẻ nhớ tương thích	SD/SDHC/SDXC
+Cổng kết nối	AV, USB
+Bộ cảm ứng hình ảnh 16 triệu điểm ảnh, rộng 3,5 inch vơí góc nhìn rộng sẽ cho hình ảnh rõ nét, độ tương phản cao
+Một màn hình cảm ứng OLED tĩnh điện, 820 ngàn điểm chạm, màn hình rộng 3,5 inch ( WVGA đầy đủ ) với góc nhìn rộng cho ảnh thật và rõ, hiển thị sinh động các chi tiết sắc xảo 
+Góc nhìn 180° giúp nhìn rõ hơn trên màn hình hiển thị gần như mọi góc cạnh
+Pin	Pin Sạc Li-ion EN-EL19
+Kích thước:	89.8 x 60.4 x 17.8 mm
+Khối Lượng:	110 g
+Phụ kiện kèm theo	Dây Máy ảnh, Pin Sạc Li-ion EN-EL19, Bộ sạc điện AC EH-70P, Cáp USB UC-E6, CD ViewNX 2
+Màu sắc	Đen, bạc, tím, đỏ

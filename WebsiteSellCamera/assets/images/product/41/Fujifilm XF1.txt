@@ -1,0 +1,27 @@
+﻿Fujifilm XF1- máy ảnh kế thừa sức mạnh cực khủng 7900000
+
+DisplaySize: 3
+OpticalZoom: 4
+Megapixels: 12
+BatteryType: Li-ion NP-50A
+
+- Máy ảnh Fujifilm dòng X cao cấp thế hệ 2012
+
+- Thiết kế quyến rũ tinh tế mang phong cách cổ điển
+
+- Cảm biến EXR CMOS 2/3" độ phân giải 12.0 Mps
+
+- Ống kính Fujinon 25-100mm độ mở lớn tới f1.8
+
+- Tốc độ chụp liên tục lên tới 10 hình/s, ISO tới 12.800
+
+- Hỗ trợ định dạng RAW với các chế độ chuyên nghiệp
+
+- Quay phim FullHD 1920*1080, chụp Panorama 360°
+
+- Màn hình chống xước 3" độ phân giải 460.000 điểm
+
+Kích thước sản phẩm (D x R x C cm)	11 x 6 x 4
+Bảo hành	Bảo hành trong 24 tháng bằng hình thức Phiếu bảo hành
+Trọng lượng (KG)	0.26
+Sản xuất tại	Trung Quốc

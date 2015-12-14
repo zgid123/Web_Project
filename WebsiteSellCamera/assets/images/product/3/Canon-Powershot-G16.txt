@@ -1,0 +1,23 @@
+﻿Canon PowerShot G16 - Máy ảnh zoom du lịch gọn nhẹ 5190000
+<ul>
+<li>Độ phân giải máy ảnh	16 megapixels</li>
+<li>Bộ xử lý máy ảnh	DIGIC 4</li>
+<li>Cảm biến hình ảnh	CCD 1/2.3"</li>
+<li>Ống kính	Canon zoom</li>
+<li>Tiêu cự	5,0 (W) - 25,0 (T)mm (tương đương với phim 35mm 28 (W) - 140 (T)mm) </li>
+<li>Khẩu độ	f/2,8, f/7,9 (W), f/6,9, f/20 (T) </li>
+<li>Độ nhạy ISO	Tự động, ISO 100 / 200 / 400 / 800 / 1600</li>
+<li>Zoom quang học	5x</li>
+<li>Zoom kỹ thuật số	Xấp xỉ 4,0x (có thể lên tới xấp xỉ 20x khi kết hợp với zoom quang học) </li>
+<li>Màn hình	Màn hình màu TFT (loại góc ngắm rộng), xấp xỉ 230.000 điểm ảnh, tỉ lệ khuôn hình 4:3</li>
+<li>Kích thước màn hình	2.7 inch</li>
+<li>Cân bằng trắng	Auto / Daylight / Cloudy / Tungsten / Fluorescent / Fluorescent H / Custom</li>
+<li>Quay phim 	HD 720p (1280 x 720)</li>
+<li>Định dạng quay phim	MOV</li>
+<li>Thẻ nhớ tương thích	SD/SDHC/SDXC</li>
+<li>Cổng kết nối	AV / USB</li>
+<li>Loại pin	2 pin AA</li>
+<li>Kích thước	94.7 x 61.7 x 29.8mm</li>
+<li>Khối Lượng	174g (bao gồm pin và thẻ nhớ) </li>
+<li>Màu sắc	Bạc, đen</li>
+</ul>

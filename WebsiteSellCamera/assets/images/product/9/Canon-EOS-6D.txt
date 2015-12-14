@@ -1,0 +1,61 @@
+﻿Canon-EOS-6D - Sức mạnh thắp sáng bóng đêm 3180000
+Thiết bị xử lý hình ảnh	DIGIC 5
+Bộ cảm biến hình ảnh	 
+Các điểm ảnh hiệu quả	Xấp xỉ 12.1 triệu điểm ảnh
+Ống kính	 
+Chiều dài tiêu cự	Zoom 5x:	5,2 (W) - 26 (T)mm
+(tương đương với phim 35mm: 24 (W) - 120 (T)mm)
+Phạm vi lấy nét	3cm (1,2in.) - infinity (W), 30cm (12in.) - infinity (T)
+Ảnh Macro:	3 - 50cm (1,2in. - 1,6ft.) (W), 
+30 - 50cm (12in. - 1,6ft.) (T)
+Hệ thống ổn định hình ảnh (IS)	Loại ống kính dịch chuyển
+Màn hình LCD	 
+Kích thước màn hình	Loại 3,0-inch (Xấp xỉ 461.000 điểm ảnh)
+Tỉ lệ khuôn hình	4:3
+Các tính năng	Màn hình chạm
+Lấy nét	 
+Hệ thống điều chỉnh	AF liên tục, Servo AF / Servo AE, lấy nét bằng tay
+Khung AF	AiAF dò tìm khuôn mặt, gắn cố định
+Hệ thống lấy sáng	Lấy sáng toàn bộ, lấy sáng trung bình trọng điểm vùng trung tâm, lấy điểm
+Tốc độ ISO (độ nhạy đầu ra tiêu chuẩn, thông số ánh sáng khuyên dùng)	Auto, ISO 80 - 12800 
+dung sai 1/3 điểm
+Màn trập	 
+Tốc độ màn trập	1 - 1/2000 giây
+15 - 1/2000 giây (khi ở chế độ Tv và chế độ M)
+Khẩu độ	 
+Loại	Loại Iris
+f/số	f/2,0 - f/8,0 (W), f/5,9 - f/8,0 (T)
+Đèn Flash	 
+Các chế độ đèn	Đèn tự động, bật đèn, xung thấp, tắt đèn
+Phạm vi đèn	50cm - 7,0m (W), 50 - 2,3m (T)
+(1,6ft. - 23ft. (W), 1,6 - 7,5 (T))
+Các thông số kĩ thuật chụp hình	 
+Các chế độ chụp	C, M, Av, Tv, P, chụp tự động, Movie Digest, SCN*1, chụp với bộ lọc sáng tạo*2, quay phim*3
+
+*1 Chụp chân dung, chụp da mặt mịn, chụp màn trập thông minh*4, chụp tốc độ cao HQ, chụp cảnh đêm cầm máy, chụp dưới nước, chụp cảnh tuyết, hỗ trợ ghép hình. 
+*2 Phạm vi động lực học cao, chụp hoài cổ, chụp hiệu ứng mắt cá, chụp hiệu ứng thu nhỏ, chụp hiệu ứng máy ảnh đồ chơi, chụp lấy nét mềm, chụp đơn sắc, chụp sống động, chụp hiệu ứng poster, chụp nhấn màu, chụp đổi màu.
+*3 Tiêu chuẩn, quay phim iFrame, quay phim chuyển động siêu chậm. 
+*4 Cười, hẹn giờ nháy mắt, hẹn giờ lấy khuôn mặt.
+Chụp hình liên tiếp	Ở chế độ P:	Xấp xỉ 2,1 ảnh/giây
+Ở chế độ chụp HQ tốc độ cao:	Xấp xỉ 10 ảnh/giây
+Số lượng điểm ảnh ghi hình	Ảnh tĩnh:	4:3
+Ảnh cỡ lớn: 4000 x 3000, 
+Ảnh cỡ trung 1: 2816 x 2112,
+Ảnh cỡ trung 2: 1600 x 1200,
+Ảnh cỡ nhỏ: 640 x 480, 
+Ảnh RAW: 4000 x 3000
+Phim ngắn:	Quay phim iFrame và Movie Digest: 1280 x 720
+Phim ngắn chuyển động siêu chậm: 640 x 480 / 
+320 x 240
+Hiệu ứng thu nhỏ: 1280 x 720 / 640 x 480
+Các loại khác: 1920 x 1080 / 1280 x 720 / 
+640 x 480
+Số lượng ảnh chụp 
+(tuân theo CIPA)	Xấp xỉ 200 ảnh
+Thời gian quay phim 
+(thời gian sử dụng thực tế)	Xấp xỉ 40 phút
+Nguồn điện	Bộ pin NB-5L
+Kích thước (tuân theo CIPA)	98,8 x 59,0 x 26,9mm (3,89 x 2,32 x 1,06in.)
+Trọng lượng (tuân theo CIPA)	Xấp xỉ 198g (14,1oz.) (bao gồm pin và thẻ nhớ)
+Xấp xỉ 173g (12,4oz.) (chỉ tính riêng trọng lượng thân máy)
+Các chức năng khác	GPS

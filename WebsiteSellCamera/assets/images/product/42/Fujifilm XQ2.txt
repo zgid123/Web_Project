@@ -1,0 +1,22 @@
+﻿Fujifilm XQ2 - máy ảnh kế thừa tất cả tinh tuý 7200000
+Thương hiệu Nhật bản
+Megapixel 12 megapixel
+Độ lớn màn hình 3 inch
+Trọng lượng 206 gram
+Loại ống kính Ống kính zoom quang học 4x FujinonTặng thẻ 8GB + Ba lô Babolat (áp dụng từ 01/7 đến 30/9/2015)
+Helvetica
+sans-serif; color: rgb(18
+18
+18); min-height: 90px;">
+Màu sắc	Đen
+Khẩu độ F1.8 (Wide) - F4.9 (Telephoto)
+Cảm biến hình ảnh Độ nhạy sáng (ISO)	100 / 200 / 250 / 320 / 400 / 500 / 640 / 800 / 1000 / 1250 / 1600 / 2000 / 2500 / 3200 / 4000 / 5000 / 6400 / 12800
+Độ dài tiêu cự (Focal Length)	f = 6.4 - 25.6mm, tương đương 25 - 100mm trên một định dạng 35mm
+Tốc độ chụp (Shutter Speed)	30-1/4000
+Tự động lấy nét (AF)	
+Optical Zoom (Zoom quang)	16x
+Digital Zoom (Zoom số)	4x
+Thông số khác
+Định dạng File ảnh	jPEG (Exif Ver 2.3) * 2, RAW (định dạng RAF), RAW + JPEG
+Định dạng File phim	Movie File Format: MOV Movie Video Compression: H.264 Audio: Linear PCM Stereo
+Chuẩn giao tiếp	USB 2.0-Micro HDMI

@@ -1,0 +1,22 @@
+﻿Sony-ALPHA-SLT65 20.1MP đi kèm ống kính SAL18552 10990000
+Độ phân giải máy ảnh	20.1 megapixel
+Bộ xử lý máy ảnh	Bionz
+Cảm biến hình ảnh	Cảm biến "Exmor" APS HD CMOS
+Ống kính 	Ống kính A-mount Sony, hoạt động được với các ống kính Minolta/Konica Minolta
+Tiêu cự	18-55mm
+Khẩu độ	3.5-5.6
+Độ nhạy ISO	ISO 125-1600 ISO 3200 (khả dụng khi sử dụng Chế độ tự động)
+Zoom quang học	-
+Zoom kỹ thuật số	-
+Màn hình 	TFT, 460.800-dot
+Kích thước màn hình	2.7 inch
+Cân bằng trắng	Auto WB, Daylight, Shade, Cloudy, Incandescent, Fluorescent, Flash, C.Tem , C.Filter , Custom
+Quay phim 	Full HD 
+Định dạng quay phim	AVCHD Ver. 2.0, MP4
+Bộ nhớ trong 	-
+Thẻ nhớ tương thích	Memory Stick PRO Duo, Memory Stick PRO-HG Duo, Memory Stick XC-HG Duo, SD, SDHC, SDXC
+Cổng kết nối	AV, USB, micro HDMI
+Pin	NP-FM500H
+Kích thước:	128.6 x 95.5 x 77.7mm
+Khối Lượng:	492g (chỉ tính body)
+Màu sắc	Đen
