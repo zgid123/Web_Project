@@ -7,14 +7,14 @@ define("PWD", "");
 
 class DataProvider {
 
-    public static function ExecuteQuery($sql) {
+    public static function ExecuteQuery($query) {
         $cn = new mysqli(SERVER, UID, PWD, DB);
         if ($cn->connect_errno) {
             die("Failed to connect to MySQL: (" . $cn->connect_errno . ") " . $cn->connect_error);
         }
 
         $cn->query("set names 'utf8'");
-        $resultSet = $cn->query($sql);
+        $resultSet = $cn->query($query);
         return $resultSet;
     }
 

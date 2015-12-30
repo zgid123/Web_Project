@@ -74,7 +74,7 @@
                 for ($j = 0; $j < count($leftSeriesList); $j++) {
                     ?>
                     <li>
-                        <a href="?series=<?php echo $seriesList[$j]->getSeriesID(); ?>">
+                        <a href="?series=<?php echo $leftSeriesList[$j]->getSeriesID(); ?>">
                             Dòng máy <?php echo $leftSeriesList[$j]->getSeriesName(); ?>
                         </a>
                     </li>

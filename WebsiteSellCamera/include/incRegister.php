@@ -57,9 +57,11 @@
             </div>
             <div class="form-group reg-form-group">
                 <div class="input-group reg-input-group">
-                    <label>Mã xác nhận</label>
-                    <input type="hidden" id="captcha"
-                           name="captcha" />
+                    <!--                    <label>Mã xác nhận</label>
+                                        <input type="hidden" id="captcha"
+                                               name="captcha" />-->
+                    <img class="img-reponsive" src="Library/cool-php-captcha-0.3.1/captcha.php" id="captcha" />
+
                 </div>
                 <div class="input-group reg-input-group">
                     <label><span class="redColor">*</span>Xác nhận</label>
