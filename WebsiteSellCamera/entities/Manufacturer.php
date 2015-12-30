@@ -50,4 +50,15 @@ class Manufacturer {
         return $result;
     }
 
+    public static function getManufacturerByID($mfID) {
+        $query = "Select ManufacturerID, ManufacturerName From manufacturer Where ManufacturerID = $mfID";
+
+        $manufacturer = DataProvider::ExecuteQuery($query);
+
+        if (isset($manufacturer))
+            return $manufacturer;
+        else
+            return null;
+    }
+
 }

@@ -50,4 +50,15 @@ class Category {
         return $result;
     }
 
+    public static function getCategoryByID($catID) {
+        $query = "Select CatID, CatName From category Where CatID = $catID";
+
+        $category = DataProvider::ExecuteQuery($query);
+
+        if (isset($category))
+            return $category;
+        else
+            return null;
+    }
+
 }

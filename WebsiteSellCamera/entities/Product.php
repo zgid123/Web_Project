@@ -123,7 +123,7 @@ class Product {
     }
 
     public static function getProductByID($proID) {
-        $query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate "
+        $query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID "
                 . "From products Where ProID = $proID";
 
         $product = DataProvider::ExecuteQuery($sql);
