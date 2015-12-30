@@ -18,7 +18,7 @@
                     <?php
                     require_once 'entities/Product.php';
 
-                    $productList = Product::getProduct("Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate From products Order by UploadDate DESC Limit 10");
+                    $productList = Product::getProducts("Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate From products Order by UploadDate DESC Limit 10");
                     for ($i = 0; $i < count($productList) / 2; $i++) {
                         ?>
                         <div class="product">
@@ -29,13 +29,13 @@
                             <div id = "" class = "productName">
                                 <p><?php echo $productList[$i]->getProName(); ?></p>
                             </div>
-                            <div id="productPrice" class="price">
+                            <div id="" class="price">
                                 <?php
                                 echo number_format($productList[$i]->getPrice());
                                 echo " VNĐ";
                                 ?>
                             </div>
-                            <button id="addCart" class="addCart">
+                            <button id="" class="addCart">
                                 <i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i>
                             </button>
                         </div>
@@ -60,15 +60,15 @@
                             </a>
                             <img class = "img-reponsive" src = "<?php echo $productList[$i]->getURL(); ?>" alt = ""/>
                             <div id = "" class = "productName">
-                                <?php echo $productList[$i]->getProName(); ?>
+                                <p><?php echo $productList[$i]->getProName(); ?></p>
                             </div>
-                            <div id="productPrice" class="price">
+                            <div id="" class="price">
                                 <?php
                                 echo number_format($productList[$i]->getPrice());
                                 echo " VNĐ";
                                 ?>
                             </div>
-                            <button id="addCart" class="addCart">
+                            <button id="" class="addCart">
                                 <i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i>
                             </button>
                         </div>
@@ -90,7 +90,7 @@
             <div class="carousel-inner">
                 <div class="item active">
                     <?php
-                    $topSellList = Product::getProduct("Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate From products Order by Bought DESC Limit 10");
+                    $topSellList = Product::getProducts("Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate From products Order by Bought DESC Limit 10");
                     for ($i = 0; $i < count($topSellList) / 2; $i++) {
                         ?>
                         <div class="product">
@@ -99,15 +99,15 @@
                             </a>
                             <img class = "img-reponsive" src = "<?php echo $topSellList[$i]->getURL(); ?>" alt = ""/>
                             <div id = "" class = "productName">
-                                <?php echo $topSellList[$i]->getProName(); ?>
+                                <p><?php echo $topSellList[$i]->getProName(); ?></p>
                             </div>
-                            <div id="productPrice" class="price">
+                            <div id="" class="price">
                                 <?php
                                 echo number_format($topSellList[$i]->getPrice());
                                 echo " VNĐ";
                                 ?>
                             </div>
-                            <button id="addCart" class="addCart">
+                            <button id="" class="addCart">
                                 <i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i>
                             </button>
                         </div>
@@ -125,15 +125,15 @@
                             </a>
                             <img class = "img-reponsive" src = "<?php echo $topSellList[$i]->getURL(); ?>" alt = ""/>
                             <div id = "" class = "productName">
-                                <?php echo $topSellList[$i]->getProName(); ?>
+                                <p><?php echo $topSellList[$i]->getProName(); ?></p>
                             </div>
-                            <div id="productPrice" class="price">
+                            <div id="" class="price">
                                 <?php
                                 echo number_format($topSellList[$i]->getPrice());
                                 echo " VNĐ";
                                 ?>
                             </div>
-                            <button id="addCart" class="addCart">
+                            <button id="" class="addCart">
                                 <i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i>
                             </button>
                         </div>
@@ -155,7 +155,7 @@
             <div class="carousel-inner">
                 <div class="item active">
                     <?php
-                    $topViewList = Product::getProduct("Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate From products Order by Viewed DESC Limit 10");
+                    $topViewList = Product::getProducts("Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate From products Order by Viewed DESC Limit 10");
                     for ($i = 0; $i < count($topSellList) / 2; $i++) {
                         ?>
                         <div class="product">
@@ -164,15 +164,15 @@
                             </a>
                             <img class = "img-reponsive" src = "<?php echo $topViewList[$i]->getURL(); ?>" alt = ""/>
                             <div id = "" class = "productName">
-                                <?php echo $topViewList[$i]->getProName(); ?>
+                                <p><?php echo $topViewList[$i]->getProName(); ?></p>
                             </div>
-                            <div id="productPrice" class="price">
+                            <div id="" class="price">
                                 <?php
                                 echo number_format($topViewList[$i]->getPrice());
                                 echo " VNĐ";
                                 ?>
                             </div>
-                            <button id="addCart" class="addCart">
+                            <button id="" class="addCart">
                                 <i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i>
                             </button>
                         </div>
@@ -190,15 +190,15 @@
                             </a>
                             <img class = "img-reponsive" src = "<?php echo $topViewList[$i]->getURL(); ?>" alt = ""/>
                             <div id = "" class = "productName">
-                                <?php echo $topViewList[$i]->getProName(); ?>
+                                <p><?php echo $topViewList[$i]->getProName(); ?></p>
                             </div>
-                            <div id="productPrice" class="price">
+                            <div id="" class="price">
                                 <?php
                                 echo number_format($topViewList[$i]->getPrice());
                                 echo " VNĐ";
                                 ?>
                             </div>
-                            <button id="addCart" class="addCart">
+                            <button id="" class="addCart">
                                 <i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i>
                             </button>
                         </div>

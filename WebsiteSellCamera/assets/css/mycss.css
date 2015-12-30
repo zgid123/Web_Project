@@ -19,11 +19,11 @@ body>img{
     right: 5px;
     bottom: 5px;
     display: none;
-    color: #009999;
+    color: rgba(0, 229, 230, 0.5)!important;
 }
 
 #back-to-top:hover{
-    color: #00e5e6;
+    color: rgba(0, 76, 77, 3)!important;
 }
 
 /* CSS for Header */
@@ -265,7 +265,7 @@ button.nav.navbar-nav.navbar-right{
     color: #538cc5;
 }
 
-div.product{
+#content div.product{
     display: inline-block;
     width: 193.156px;
     border: 3px solid;
@@ -277,7 +277,7 @@ div.product{
     background-color: white;
 }
 
-div.product>.productName{
+#content div.product>.productName{
     overflow: hidden;
     white-space: nowrap;
     text-overflow: clip;
@@ -285,7 +285,7 @@ div.product>.productName{
     font-weight: bold;
 }
 
-div.product>.productName>p{
+#content div.product>.productName>p{
     position: relative;
 }
 
@@ -351,6 +351,11 @@ div.product>.productName>p{
     display: inline-block;
 }
 
+.reg-input-group>#captcha{
+    cursor: pointer;
+    width: 100%;
+}
+
 .reg-form>.panel, .reg-form>.panel.panel-primary>.panel-heading{
     margin: 0px;
     border-radius: 0px;
@@ -364,4 +369,37 @@ div.product>.productName>p{
     width: 200px;
     margin-top: 10px;
     font-size: 20px;
+}
+
+/* CSS for Product page */
+#product>.panel-body{
+    border: 0px;
+    padding: 0px;
+}
+
+#product>.panel-body>.product{
+    text-align: center;
+    font-size: 18px;
+    box-sizing: border-box;
+    border: 1px solid;
+    padding: 10px;
+    margin: 8px;
+    width: 229px;
+    height: 337px !important;
+}
+
+#product>.panel-body>.product>.productName{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+    margin: 10px 0px 20px 0px;
+    font-weight: bold;
+}
+
+#product>.panel-body>.product>.productName>p{
+    position: relative;
+}
+
+#product>.panel-body>.product>.addCart>.fa-shopping-cart{
+    font-size: 18px;
 }
