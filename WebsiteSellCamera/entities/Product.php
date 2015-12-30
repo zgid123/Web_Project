@@ -110,12 +110,66 @@ class Product {
         $this->UploadDate = $uploadDate;
     }
 
-    public static function getProduct($query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate From products") {
+    public static function getProducts($query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate From products") {
         $result = array();
 
-        $product = DataProvider::ExecuteQuery($query);
+        $products = DataProvider::ExecuteQuery($query);
 
-        while ($row = $product->fetch_assoc()) {
+        while ($row = $products->fetch_assoc()) {
+            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"]));
+        }
+
+        return $result;
+    }
+
+    public static function getProductByID($proID) {
+        $query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate "
+                . "From products Where ProID = $proID";
+
+        $product = DataProvider::ExecuteQuery($sql);
+
+        if (isset($product))
+            return $product;
+        else
+            return null;
+    }
+
+    public static function getProductsByCatID($catID) {
+        $result = array();
+        $query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate "
+                . "From products Where CatID = $catID";
+
+        $products = DataProvider::ExecuteQuery($query);
+
+        while ($row = $products->fetch_assoc()) {
+            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"]));
+        }
+
+        return $result;
+    }
+
+    public static function getProductsByMFID($mfID) {
+        $result = array();
+        $query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate "
+                . "From products Where ManufacturerID = $mfID";
+
+        $products = DataProvider::ExecuteQuery($query);
+
+        while ($row = $products->fetch_assoc()) {
+            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"]));
+        }
+
+        return $result;
+    }
+
+    public static function getProductsBySeriesID($seriesID) {
+        $result = array();
+        $query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate "
+                . "From products Where SeriesID = $seriesID";
+
+        $products = DataProvider::ExecuteQuery($query);
+
+        while ($row = $products->fetch_assoc()) {
             array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"]));
         }
 

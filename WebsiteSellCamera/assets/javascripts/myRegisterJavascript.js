@@ -1,6 +1,7 @@
 // Javascript for Captcha
-$(function () {
-    $("#captcha").realperson();
+$("#captcha").click(function () {
+    var src = 'Library/cool-php-captcha-0.3.1/captcha.php?' + Math.random();
+    $('#captcha').attr('src', src);
 });
 
 // Javascript for reg-form

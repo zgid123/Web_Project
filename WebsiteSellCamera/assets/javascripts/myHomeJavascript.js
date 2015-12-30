@@ -40,17 +40,18 @@ $("#content").ready(function () {
         $(this).children(".btnDetail").hide();
     });
 
-    $(".productName>p").mouseover(function () {
-        var text = $(this).text();
-        if (text.length * 10 > $(this).width())
-            $(this).animate({
-                right: Math.abs($(this).text().length * 8 - $(this).width())
-            }, 600);
+    $(".productName").mouseenter(function () {
+        var $this = $(this).children();
+        if ($this[0].scrollWidth > $this.width())
+            $this.animate({
+                right: Math.abs($this[0].scrollWidth - $this.width())
+            }, 700);
     });
 
-    $(".productName>p").mouseout(function () {
-        $(this).animate({
+    $(".productName").mouseleave(function () {
+        var $this = $(this).children();
+        $this.animate({
             right: 0
-        }, 600);
+        }, 400);
     });
 });
