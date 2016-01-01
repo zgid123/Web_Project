@@ -50,4 +50,18 @@ class Category {
         return $result;
     }
 
+    public static function getCategoryByID($catID) {
+        $query = "Select CatID, CatName From category Where CatID = $catID";
+
+        $category = null;
+
+        $result = DataProvider::ExecuteQuery($query);
+
+        if ($row = $result->fetch_assoc()) {
+            $category = new Category($row["CatID"], $row["CatName"]);
+        }
+
+        return $category;
+    }
+
 }

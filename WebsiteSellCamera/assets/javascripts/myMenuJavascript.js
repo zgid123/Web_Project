@@ -1,4 +1,4 @@
-$("incLeft.php").ready(function () {
+$(document).ready(function () {
     $("#left .list-group:last").css({
         "height": $("#left .list-group:last").height() + 3
     });

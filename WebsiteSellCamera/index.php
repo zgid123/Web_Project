@@ -20,6 +20,14 @@ and open the template in the editor.
 
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/myHeaderCSS.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/myTopCSS.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/myFooterCSS.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/myLeftCSS.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/myContentCSS.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/myRegisterCSS.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/myProductCSS.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/myDetailCSS.css" rel="stylesheet" type="text/css"/>
         <link href="assets/css/mycss.css" rel="stylesheet" type="text/css" />
     </head>
 
@@ -76,7 +84,13 @@ and open the template in the editor.
                                     if (is_numeric($action)) {
                                         include_once ("include/incProduct.php");
                                     } else {
-                                        include_once("include/incHome.php");
+                                        $action = isset($_GET["pro"]) ? $_GET["pro"] : "";
+
+                                        if (is_numeric($action)) {
+                                            include_once ("include/incDetail.php");
+                                        } else {
+                                            include_once("include/incHome.php");
+                                        }
                                     }
                                 }
                             }
@@ -86,7 +100,7 @@ and open the template in the editor.
             </div> 
         </div>
 
-        <div class="footer" id="footer">	
+        <div class="footer" id="footer">
             <?php
             include_once("include/incFooter.php");
             ?>
@@ -97,7 +111,6 @@ and open the template in the editor.
         <script src="assets/javascripts/myJavascript.js" type="text/javascript"></script>
         <script src="assets/javascripts/myRegisterJavascript.js" type="text/javascript"></script>
         <script src="assets/javascripts/myMenuJavascript.js" type="text/javascript"></script>
-        <script src="assets/javascripts/myHomeJavascript.js" type="text/javascript"></script>
         <script src="assets/javascripts/myProductJavascript.js" type="text/javascript"></script>
     </body>
     <!-- InstanceEnd -->

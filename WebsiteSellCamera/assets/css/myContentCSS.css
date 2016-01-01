@@ -1,0 +1,93 @@
+/* CSS for Content Menu */
+#content>.list-group-item{
+    border: 0px;
+}
+
+#content>.list-group-item.content{
+    padding: 10px 0px 10px 0px;
+    background-color: lightgray;
+}
+
+#content>.list-group-item.title{
+    font-size: 25px;
+    background-color: #538cc5;
+}
+
+#content>.list-group-item.title>.badge{
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+#content>.list-group-item.title .badge:hover, #content>.list-group-item.title .badge:active, *
+#content>.list-group-item.title .badge:visited, #content>.list-group-item.title .badge>i{
+    color: #538cc5;
+}
+
+#content div.product{
+    display: inline-block;
+    width: 193.156px;
+    border: 3px solid;
+    border-radius: 3px;
+    border-color: #006666;
+    padding: 20px 5px 20px 5px;
+    height: 350px;
+    font-size: 18px;
+    background-color: white;
+}
+
+#content .productImg{
+    height: 160px;
+}
+
+#content div.product>.productName{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+    margin: 10px 0px 20px 0px;
+    font-weight: bold;
+}
+
+#content div.product>.productName>p{
+    position: relative;
+}
+
+#content .item{
+    text-align: center;
+}
+
+#content .item i{
+    font-size: 18px;
+}
+
+.price{
+    padding: 5px 0px 5px 0px;
+    margin: 20px 0px 20px 0px;
+    color: white;
+    background-color: red;
+}
+
+.addCart{
+    padding: 5px;
+    background-color: #336699;
+    border: 0px;
+    border-radius: 2px;
+    color: white;
+}
+
+.addCart:hover{
+    background-color: #0033cc;
+}
+
+.btnDetail{
+    color: #ff0000;
+    position: absolute;
+    display: none;
+}
+
+.btnDetail>.fa-search-plus{
+    font-size: 50px !important;
+}
+
+.btnDetail:hover{
+    color: #0033cc;
+}
