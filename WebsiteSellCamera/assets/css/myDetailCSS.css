@@ -1,0 +1,116 @@
+/* CSS for Detail page */
+#detail>.panel-body{
+    padding: 0px;
+    border: 0px;
+}
+
+#detail .panel-heading{
+    padding: 0px;
+}
+
+#detail .panel-title{
+    background-color: #538cc5;
+    font-size: 30px;
+    text-align: justify;
+    margin-bottom: 15px;
+    padding: 15px;
+    color: white;
+}
+
+#detail #productInfor{
+    font-size: 18px;
+    padding: 15px;
+}
+
+#detail #productInfor .redColor{
+    font-size: 25px;
+}
+
+#detail #productInfor>#productNote .col-md-4{
+    text-align: right;
+}
+
+#detail #productInfor>#productNote .addCart>.fa-shopping-cart{
+    font-size: 18px;
+}
+
+#detail .form-group.col-md-6{
+    padding: 15px 25px 15px 25px;
+    text-align: center;
+}
+
+#detail .form-group .input-group-btn>button{
+    width: 50px !important;
+}
+
+#detail #numericUpDown{
+    padding-right: 0px;
+    padding-left: 50px;
+}
+
+#detail #btnAddCart{
+    padding-left: 0px;
+    padding-right: 50px;
+}
+
+#detail #productQuantity{
+    z-index: 3;
+}
+
+#similarProduct>.list-group-item{
+    border: 0px;
+}
+
+#similarProduct>.list-group-item.content{
+    padding: 10px 0px 10px 0px;
+    background-color: lightgray;
+}
+
+#similarProduct>.list-group-item.title{
+    font-size: 25px;
+    background-color: #538cc5;
+    text-align: left;
+}
+
+#similarProduct>.list-group-item.title>.badge{
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+#similarProduct>.list-group-item.title .badge:hover, #similarProduct>.list-group-item.title .badge:active, *
+#similarProduct>.list-group-item.title .badge:visited, #similarProduct>.list-group-item.title .badge>i{
+    color: #538cc5;
+}
+
+#similarProduct div.product{
+    display: inline-block;
+    width: 193.156px;
+    border: 3px solid;
+    border-radius: 3px;
+    border-color: #006666;
+    padding: 20px 5px 20px 5px;
+    height: 350px;
+    font-size: 18px;
+    background-color: white;
+    text-align: center;
+}
+
+#similarProduct div.product>.productImg{
+    height: 160px;
+}
+
+#similarProduct div.product>.productName{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+    margin: 10px 0px 20px 0px;
+    font-weight: bold;
+}
+
+#similarProduct div.product>.productName>p{
+    position: relative;
+}
+
+#similarProduct .fa-shopping-cart{
+    font-size: 18px;
+}

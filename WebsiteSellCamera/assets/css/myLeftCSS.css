@@ -1,0 +1,80 @@
+/* CSS for Left Menu */
+#left .list-group{
+    border: 1px solid;
+    border-color: gray;
+    border-radius: 3px;
+}
+
+#left .list-group .list-group-item{
+    border: 0px;
+    font-weight: bold;
+    border-radius: 0px;
+}
+
+#left .list-group a.list-group-item:hover{
+    background-color: #00b2b3;
+    color: white;
+}
+
+#left>.list-group>.list-group-item>p>a:hover{
+    text-decoration: none;
+    color: #00b2b3;
+}
+
+.list-group-item.title{
+    text-align: center;
+    background-color: #538cc5;
+    color: white;
+    font-weight: bold;
+    border-radius: 0px;
+}
+
+.list-group-item>.badge{
+    background-color: white;
+    color: #336699;
+}
+
+.list-group-item.center{
+    text-align: center;
+}
+
+.list-group-item.center>p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.list-group-item.center>p.title{
+    background-color: #ff0000;
+    color: white;
+    font-weight: normal;
+}
+
+.list-group-item.center>p>.fa{
+    font-size: 30px;
+}
+
+.list-group-item.center>p>a{
+    color: black;
+    text-align: center;
+}
+
+.form-inline.navbar-right{
+    margin: 3px 15px 0px 0px;
+}
+
+#left div.dropdown{
+    position: absolute;
+}
+
+#left div.dropdown>ul.dropdown-menu{
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+    border-radius: 0px;
+    font-size: 17px;
+}
+
+#left div.dropdown>ul.dropdown-menu>li>a:hover{
+    background-color: #00b2b3;
+    color: white;
+}

@@ -18,14 +18,16 @@
                     <?php
                     require_once 'entities/Product.php';
 
-                    $productList = Product::getProducts("Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate From products Order by UploadDate DESC Limit 10");
+                    $productList = Product::getProducts("Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn From products Order by UploadDate DESC Limit 10");
                     for ($i = 0; $i < count($productList) / 2; $i++) {
                         ?>
                         <div class="product">
                             <a class="btnDetail" href="?pro=<?php echo $productList[$i]->getProID(); ?>">
                                 <i class="fa fa-search-plus"></i>
                             </a>
-                            <img class = "img-reponsive" src = "<?php echo $productList[$i]->getURL(); ?>" alt = ""/>
+                            <div class="productImg">
+                                <img class = "img-reponsive" src = "<?php echo $productList[$i]->getURL(); ?>" alt = ""/>
+                            </div>
                             <div id = "" class = "productName">
                                 <p><?php echo $productList[$i]->getProName(); ?></p>
                             </div>
@@ -58,7 +60,9 @@
                             <a class="btnDetail" href="?pro=<?php echo $productList[$i]->getProID(); ?>">
                                 <i class="fa fa-search-plus"></i>
                             </a>
-                            <img class = "img-reponsive" src = "<?php echo $productList[$i]->getURL(); ?>" alt = ""/>
+                            <div class="productImg">
+                                <img class = "img-reponsive" src = "<?php echo $productList[$i]->getURL(); ?>" alt = ""/>
+                            </div>
                             <div id = "" class = "productName">
                                 <p><?php echo $productList[$i]->getProName(); ?></p>
                             </div>
@@ -90,14 +94,16 @@
             <div class="carousel-inner">
                 <div class="item active">
                     <?php
-                    $topSellList = Product::getProducts("Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate From products Order by Bought DESC Limit 10");
+                    $topSellList = Product::getProducts("Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn From products Order by Bought DESC Limit 10");
                     for ($i = 0; $i < count($topSellList) / 2; $i++) {
                         ?>
                         <div class="product">
                             <a class="btnDetail" href="?pro=<?php echo $topSellList[$i]->getProID(); ?>">
                                 <i class="fa fa-search-plus"></i>
                             </a>
-                            <img class = "img-reponsive" src = "<?php echo $topSellList[$i]->getURL(); ?>" alt = ""/>
+                            <div class="productImg">
+                                <img class = "img-reponsive" src = "<?php echo $topSellList[$i]->getURL(); ?>" alt = ""/>
+                            </div>
                             <div id = "" class = "productName">
                                 <p><?php echo $topSellList[$i]->getProName(); ?></p>
                             </div>
@@ -123,7 +129,9 @@
                             <a class="btnDetail" href="?pro=<?php echo $topSellList[$i]->getProID(); ?>">
                                 <i class="fa fa-search-plus"></i>
                             </a>
-                            <img class = "img-reponsive" src = "<?php echo $topSellList[$i]->getURL(); ?>" alt = ""/>
+                            <div class="productImg">
+                                <img class = "img-reponsive" src = "<?php echo $topSellList[$i]->getURL(); ?>" alt = ""/>
+                            </div>
                             <div id = "" class = "productName">
                                 <p><?php echo $topSellList[$i]->getProName(); ?></p>
                             </div>
@@ -155,14 +163,16 @@
             <div class="carousel-inner">
                 <div class="item active">
                     <?php
-                    $topViewList = Product::getProducts("Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate From products Order by Viewed DESC Limit 10");
+                    $topViewList = Product::getProducts("Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn From products Order by Viewed DESC Limit 10");
                     for ($i = 0; $i < count($topSellList) / 2; $i++) {
                         ?>
                         <div class="product">
                             <a class="btnDetail" href="?pro=<?php echo $topViewList[$i]->getProID(); ?>">
                                 <i class="fa fa-search-plus"></i>
                             </a>
-                            <img class = "img-reponsive" src = "<?php echo $topViewList[$i]->getURL(); ?>" alt = ""/>
+                            <div class="productImg">
+                                <img class = "img-reponsive" src = "<?php echo $topViewList[$i]->getURL(); ?>" alt = ""/>
+                            </div>
                             <div id = "" class = "productName">
                                 <p><?php echo $topViewList[$i]->getProName(); ?></p>
                             </div>
@@ -188,7 +198,9 @@
                             <a class="btnDetail" href="?pro=<?php echo $topViewList[$i]->getProID(); ?>">
                                 <i class="fa fa-search-plus"></i>
                             </a>
-                            <img class = "img-reponsive" src = "<?php echo $topViewList[$i]->getURL(); ?>" alt = ""/>
+                            <div class="productImg">
+                                <img class = "img-reponsive" src = "<?php echo $topViewList[$i]->getURL(); ?>" alt = ""/>
+                            </div>
                             <div id = "" class = "productName">
                                 <p><?php echo $topViewList[$i]->getProName(); ?></p>
                             </div>

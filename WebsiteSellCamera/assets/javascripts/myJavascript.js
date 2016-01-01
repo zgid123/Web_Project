@@ -1,4 +1,4 @@
-$("body").ready(function () {
+$(document).ready(function () {
     var pos = 300; // position to show the back-to-top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > pos)

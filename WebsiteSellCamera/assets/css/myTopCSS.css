@@ -1,0 +1,47 @@
+/* CSS for Top */
+#body{
+    margin-bottom: 15px;
+}
+
+.nav-pills{
+    background-color: #002266;
+}
+
+.nav-pills li{
+    margin: 0px !important;
+}
+
+.nav-pills>li>a{
+    color: white;
+    font-weight: bold;
+    border-radius: inherit;
+}
+
+.nav-pills>li>ul.dropdown-menu{
+    border-radius: inherit;
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+
+.nav-pills>li>ul.dropdown-menu>li>a{
+    font-size: 17px;
+}
+
+.nav-pills>li>a:hover, .nav-pills>li>ul.dropdown-menu>li>a:hover{
+    background-color: #00b2b3 !important;
+    color: white;
+}
+
+.nav-pills>li>a:visited, .nav-pills>li.dropdown>a:visited{
+    background-color: #00b2b3 !important;
+}
+
+.nav-pills>li>a.forFA{
+    padding: 6px 15px 5px 15px;
+    height: 40px;
+}
+
+.list-group{
+    margin-top: 15px;
+}

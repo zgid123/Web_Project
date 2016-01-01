@@ -53,12 +53,15 @@ class Manufacturer {
     public static function getManufacturerByID($mfID) {
         $query = "Select ManufacturerID, ManufacturerName From manufacturer Where ManufacturerID = $mfID";
 
-        $manufacturer = DataProvider::ExecuteQuery($query);
+        $manufacturer = null;
 
-        if (isset($manufacturer))
-            return $manufacturer;
-        else
-            return null;
+        $result = DataProvider::ExecuteQuery($query);
+
+        if ($row = $result->fetch_assoc()) {
+            $manufacturer = new Manufacturer($row["ManufacturerID"], $row["ManufacturerName"]);
+        }
+
+        return $manufacturer;
     }
 
 }

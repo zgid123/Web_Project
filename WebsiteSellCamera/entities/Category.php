@@ -53,12 +53,15 @@ class Category {
     public static function getCategoryByID($catID) {
         $query = "Select CatID, CatName From category Where CatID = $catID";
 
-        $category = DataProvider::ExecuteQuery($query);
+        $category = null;
 
-        if (isset($category))
-            return $category;
-        else
-            return null;
+        $result = DataProvider::ExecuteQuery($query);
+
+        if ($row = $result->fetch_assoc()) {
+            $category = new Category($row["CatID"], $row["CatName"]);
+        }
+
+        return $category;
     }
 
 }

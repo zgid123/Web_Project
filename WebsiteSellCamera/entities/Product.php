@@ -15,7 +15,7 @@ require_once 'Utils/DataProvider.php';
 
 class Product {
 
-    var $ProID, $ProName, $URL, $TinyDes, $FullDes, $Price, $Quantity, $Bought, $Viewed, $UploadDate;
+    var $ProID, $ProName, $URL, $TinyDes, $FullDes, $Price, $Quantity, $Bought, $Viewed, $UploadDate, $CatID, $ManufacturerID, $MadeIn;
 
     public function getProID() {
         return $this->ProID;
@@ -55,6 +55,18 @@ class Product {
 
     public function getUploadDate() {
         return $this->UploadDate;
+    }
+
+    public function getCatID() {
+        return $this->CatID;
+    }
+
+    public function getManufacturerID() {
+        return $this->ManufacturerID;
+    }
+
+    public function getMadeIn() {
+        return $this->MadeIn;
     }
 
     public function setProID($id) {
@@ -97,7 +109,19 @@ class Product {
         $this->UploadDate = $date;
     }
 
-    public function __construct($id, $name, $url, $tinyDes, $fullDes, $price, $quantity, $bought, $viewd, $uploadDate) {
+    public function setCatID($catID) {
+        $this->CatID = $catID;
+    }
+
+    public function setManufacturerID($mfID) {
+        $this->ManufacturerID = $mfID;
+    }
+
+    public function setMadeIn($madeIn) {
+        $this->MadeIn = $madeIn;
+    }
+
+    public function __construct($id, $name, $url, $tinyDes, $fullDes, $price, $quantity, $bought, $viewd, $uploadDate, $catID, $manufacturerID, $madeIn) {
         $this->ProID = $id;
         $this->ProName = $name;
         $this->URL = $url;
@@ -108,41 +132,46 @@ class Product {
         $this->Bought = $bought;
         $this->Viewed = $viewd;
         $this->UploadDate = $uploadDate;
+        $this->CatID = $catID;
+        $this->ManufacturerID = $manufacturerID;
+        $this->MadeIn = $madeIn;
     }
 
-    public static function getProducts($query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate From products") {
+    public static function getProducts($query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn From products") {
         $result = array();
 
         $products = DataProvider::ExecuteQuery($query);
 
         while ($row = $products->fetch_assoc()) {
-            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"]));
+            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"]));
         }
 
         return $result;
     }
 
     public static function getProductByID($proID) {
-        $query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID "
+        $query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn "
                 . "From products Where ProID = $proID";
+        $product = null;
 
-        $product = DataProvider::ExecuteQuery($sql);
+        $result = DataProvider::ExecuteQuery($query);
 
-        if (isset($product))
-            return $product;
-        else
-            return null;
+        if ($row = $result->fetch_assoc()) {
+            $product = new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"]);
+        }
+
+        return $product;
     }
 
     public static function getProductsByCatID($catID) {
         $result = array();
-        $query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate "
+        $query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn "
                 . "From products Where CatID = $catID";
 
         $products = DataProvider::ExecuteQuery($query);
 
         while ($row = $products->fetch_assoc()) {
-            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"]));
+            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"]));
         }
 
         return $result;
@@ -150,13 +179,13 @@ class Product {
 
     public static function getProductsByMFID($mfID) {
         $result = array();
-        $query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate "
+        $query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn "
                 . "From products Where ManufacturerID = $mfID";
 
         $products = DataProvider::ExecuteQuery($query);
 
         while ($row = $products->fetch_assoc()) {
-            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"]));
+            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"]));
         }
 
         return $result;
@@ -164,13 +193,57 @@ class Product {
 
     public static function getProductsBySeriesID($seriesID) {
         $result = array();
-        $query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate "
+        $query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn "
                 . "From products Where SeriesID = $seriesID";
 
         $products = DataProvider::ExecuteQuery($query);
 
         while ($row = $products->fetch_assoc()) {
-            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"]));
+            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"]));
+        }
+
+        return $result;
+    }
+
+    public static function updateProductViewed($proID) {
+        $query = "Update products Set Viewed = Viewed + 1 Where ProID = $proID";
+
+        DataProvider::ExecuteQuery($query);
+    }
+
+    public static function updateProductBought($proID) {
+        $query = "Update products Set Bought = Bought + 1 Where ProID = $proID";
+
+        DataProvider::ExecuteQuery($query);
+    }
+
+    public static function get5ProductsByMFID($mfID, $proID) {
+        $result = array();
+        $query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn "
+                . "From products Where ManufacturerID = $mfID And ProID <> $proID "
+                . "Order by rand() "
+                . "Limit 5";
+
+        $products = DataProvider::ExecuteQuery($query);
+
+        while ($row = $products->fetch_assoc()) {
+            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"]));
+        }
+
+        return $result;
+    }
+
+    public static function get5ProductsByCatID($catID, $proID) {
+        $result = array();
+        $query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn "
+                . "From products Where CatID = $catID And ProID <> $proID "
+                . "Order by rand() "
+                . "Limit 5";
+
+        $products = DataProvider::ExecuteQuery($query);
+
+        while ($row = $products->fetch_assoc()) {
+            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"]));
         }
 
         return $result;

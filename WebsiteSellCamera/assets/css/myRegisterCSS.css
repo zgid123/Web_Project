@@ -1,0 +1,40 @@
+/* CSS for Register page */
+.reg-form{
+    margin-top: 15px;
+}
+
+.reg-form .form-group{
+    margin-left: 45px;
+    margin-right: 46px;
+}
+
+.reg-form .form-group.reg-form-group{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.reg-input-group{
+    width: 400px;
+    margin: 0px 10px 0px 45px;
+    display: inline-block;
+}
+
+.reg-input-group>#captcha{
+    cursor: pointer;
+    width: 100%;
+}
+
+.reg-form>.panel, .reg-form>.panel.panel-primary>.panel-heading{
+    margin: 0px;
+    border-radius: 0px;
+}
+
+.btn-register{
+    text-align: center;
+}
+
+.btn-register>.btn{
+    width: 200px;
+    margin-top: 10px;
+    font-size: 20px;
+}

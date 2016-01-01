@@ -1,0 +1,32 @@
+/* CSS for Product page */
+#product>.panel-body{
+    border: 0px;
+    padding: 0px;
+}
+
+#product>.panel-body>.product{
+    text-align: center;
+    font-size: 18px;
+    box-sizing: border-box;
+    border: 1px solid;
+    padding: 10px;
+    margin: 8px;
+    width: 229px;
+    height: 337px !important;
+}
+
+#product>.panel-body>.product>.productName{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+    margin: 10px 0px 20px 0px;
+    font-weight: bold;
+}
+
+#product>.panel-body>.product>.productName>p{
+    position: relative;
+}
+
+#product>.panel-body>.product>.addCart>.fa-shopping-cart{
+    font-size: 18px;
+}
