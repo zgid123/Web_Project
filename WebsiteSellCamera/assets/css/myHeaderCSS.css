@@ -1,0 +1,67 @@
+/* CSS for Header */
+.navbar-inverse{
+    background-color: #336699;
+    border-radius: inherit;
+}
+
+.navbar-brand{
+    padding: 0px 0px 0px 10px;
+}
+
+button.nav.navbar-nav.navbar-right, button.nav.navbar-nav.navbar-right:hover, 
+button.nav.navbar-nav.navbar-right:visited{
+    background-color: inherit !important;
+    outline: none;
+}
+
+button.nav.navbar-nav.navbar-right{
+    border: 0px;
+    height: 50px;
+}
+
+.navbar-nav>.fa-shopping-cart{
+    color: white;
+    padding-right: 5px;
+}
+
+.navbar.navbar-inverse .dropdown{
+    z-index:2;
+    position: absolute;
+    padding: 0px;
+}
+
+.navbar.navbar-inverse .dropdown>.dropdown-menu{
+    border-radius: 0px;
+    text-align: center;
+    padding: 10px;
+}
+
+.navbar-nav .badge{
+    background-color: white;
+    color: red;
+    position: absolute;
+    z-index: 1;
+    margin: 9px 0px 0px 9px;
+}
+
+.fa-home{
+    color: white;
+}
+
+.button{
+    width: 80px;
+}
+
+.header-textbox{
+    width: 200px;
+}
+
+.header-textbox>.form-control{
+    padding: 6px 12px 6px 12px;
+}
+
+#logout{
+    padding: 15px;
+    text-decoration: none;
+    display: none;
+}

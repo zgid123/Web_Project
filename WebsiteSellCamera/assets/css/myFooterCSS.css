@@ -1,0 +1,16 @@
+/* CSS for Footer */
+.footer .panel{
+    background: rgba(0, 0, 0, 0.8)!important;
+    color: white;
+    margin: 0px;
+    border-radius: 0px;
+}
+
+.footer .panel p>a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer .panel p>a:hover{
+    color: #00b2b3;
+}
