@@ -1,8 +1,12 @@
 ﻿<?php
 session_start();
 
-if (!isset($_SESSION["UserName"])) {
-    $_SESSION["UserName"] = null;
+if (!isset($_SESSION["Username"])) {
+    $_SESSION["Username"] = null;
+}
+
+if (!isset($_SESSION["Cart"])) {
+    $_SESSION["Cart"] = array();
 }
 ?>
 
@@ -32,6 +36,55 @@ and open the template in the editor.
     </head>
 
     <body>
+        <?php
+        require_once 'Utils/Provider.php';
+        require_once 'entities/User.php';
+
+        if (Provider::IsLogged() === false) {
+            if (isset($_POST["btnLogin"])) {
+                $username = $_POST["username"];
+                $pwd = $_POST["password"];
+
+                $u = new User(0, $username, $pwd, "", "", "", "", "", "");
+
+                $result = $u->login();
+
+                if ($result) {
+                    $_SESSION["Username"] = $u->getUsername();
+
+                    $expire = time() + 15 * 24 * 60 * 60;
+                    setcookie("UserName", $username, $expire);
+                    ?>
+                    <script type="text/javascript">
+                        alert("Đăng nhập thành công");
+                    </script>
+                    <?php
+                    if (isset($_GET["action"]) == true && $_GET["action"] === "register") {
+                        Provider::Redirect("index.php");
+                    }
+                } else {
+                    ?>
+
+                    <script type="text/javascript">
+                        alert("Đăng nhập thất bại");
+                    </script>
+
+                    <?php
+                }
+            }
+        } else {
+            if (isset($_POST["btnLogout"])) {
+                Provider::destroy();
+            }
+        }
+        if (isset($_POST["reload"])) {
+            if (isset($_SESSION["registerSuccess"]) == true && $_SESSION["registerSuccess"] === true) {
+                unset($_SESSION["registerSuccess"]);
+                Provider::Redirect("index.php");
+            }
+        }
+        ?>
+
         <div class="header" id="header">
             <?php
             include_once("include/incHeader.php");

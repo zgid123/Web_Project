@@ -60,8 +60,21 @@ button.nav.navbar-nav.navbar-right{
     padding: 6px 12px 6px 12px;
 }
 
-#logout{
-    padding: 15px;
-    text-decoration: none;
-    display: none;
+#userName{
+    border: 0px;
+}
+
+#userName>li>a{
+    border: 0px;
+    border-radius: 4px !important;
+    color: white;
+    margin: 0px;
+}
+
+#userName>li>a:hover{
+    background-color: #00b2b3 !important;
+}
+
+#userName>li>a:visited{
+    background-color: #336699;
 }

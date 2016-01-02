@@ -24,7 +24,9 @@
                     <a class="btnDetail" href="?pro=<?php echo $allProduct[$i]->getProID(); ?>">
                         <i class="fa fa-search-plus"></i>
                     </a>
-                    <img class = "img-reponsive" src = "<?php echo $allProduct[$i]->getURL(); ?>" alt = ""/>
+                    <div class="productImg">
+                        <img class = "img-reponsive" src = "<?php echo $allProduct[$i]->getURL(); ?>" alt = ""/>
+                    </div>
                     <div id = "" class = "productName">
                         <p><?php echo $allProduct[$i]->getProName(); ?></p>
                     </div>
@@ -34,7 +36,7 @@
                         echo " VNĐ";
                         ?>
                     </div>
-                    <button id="" class="addCart">
+                    <button id="" class="addCart" name="addCart">
                         <i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i>
                     </button>
                 </div>
