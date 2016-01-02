@@ -62,7 +62,7 @@
                             </div>
 
                             <div id="btnAddCart" class="form-group col-md-6">
-                                <button id="" class="addCart">
+                                <button id="" class="addCart" name="addCart">
                                     <i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i>
                                 </button>
                             </div>
@@ -120,7 +120,7 @@
                                 echo " VNĐ";
                                 ?>
                             </div>
-                            <button id="" class="addCart">
+                            <button id="" class="addCart" name="addCart">
                                 <i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i>
                             </button>
                         </div>
@@ -151,7 +151,7 @@
                                 echo " VNĐ";
                                 ?>
                             </div>
-                            <button id="" class="addCart">
+                            <button id="" class="addCart" name="addCart">
                                 <i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i>
                             </button>
                         </div>

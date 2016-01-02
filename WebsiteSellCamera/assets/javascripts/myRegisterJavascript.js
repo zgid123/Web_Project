@@ -126,26 +126,6 @@ $("#reg-form").ready(function () {
             return false;
     });
 
-    // For captcha confirm when it is lost focused
-    $("#captcha-confirm").blur(function () {
-        var parent = $(this).parent();
-        var ckValue = $("#captcha").val();
-        parent.find("div.redColor").remove();
-        var name = parent.find("label").contents().filter(function () {
-            return this.nodeType === 3;
-        }).text();
-        if (ckValue !== this.value) {
-            parent.addClass("has-error");
-            $errorCount = 1;
-            parent.append("<div class='form-control redColor' style='border:0px;'>" + name +
-                    " không đúng</div>");
-            return false;
-        }
-        parent.addClass("has-success");
-        $errorCount = 0;
-        return true;
-    });
-
     // For form when click submit
     $("#reg-form").submit(function () {
         var listRequired = $("#reg-form").find(".required");
@@ -164,5 +144,20 @@ $("#reg-form").ready(function () {
             return false;
         }
         return true;
+    });
+
+    // For reload page
+    $(function () {
+        var time;
+        var timer = setInterval(function () {
+            time = $("#reload").parent().prev().children("span").text();
+            time--;
+            $("#reload").parent().prev().children("span").text(time);
+        }, 1000);
+
+        setTimeout(function () {
+            $("#reload").parent().submit();
+            clearInterval(timer);
+        }, 3000);
     });
 });
