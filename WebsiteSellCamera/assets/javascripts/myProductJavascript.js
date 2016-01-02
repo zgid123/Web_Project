@@ -5,19 +5,28 @@ $(document).ready(function () {
 
     // Jquery for Page Detail
     $("#btnAddCart>.addCart").click(function () {
-        var amountValue = $(".navbar-inverse .fa.fa-shopping-cart.fa-3x").prev();
-        var amount = parseInt($("#productQuantity").val());
-        amount += parseInt(amountValue.text());
-        amountValue.text(amount);
+        var quantity = parseInt($("#productQuantity").val());
+        $("#IDProduct").val($(this).attr("data"));
+        $("#QuantityProduct").val(quantity);
+
         $("body").append("<div id='notice_" + $noticeCount + "'></div>");
         var notice = $("div[id*='notice_" + $noticeCount + "']");
-        var message = "Đã thêm <b>" + $("#productName").text() + "</b> vào giỏ hàng";
+        var message = "Đã thêm " + quantity + " <b>" + $("#productName").text() + "</b> vào giỏ hàng";
+
+        var amount = $(".navbar-inverse .fa.fa-shopping-cart.fa-3x").prev();
+        quantity += parseInt(amount.text());
+        amount.text(quantity);
+
         notice.append(message);
-        height = notice.height() + 50;
+        if ($noticeCount === 0) {
+            height = 10;
+        } else {
+            height += notice.height() + 50;
+        }
         notice.css({
             "position": "fixed",
             "right": 10,
-            "top": $noticeCount * height + 10,
+            "top": height + 10,
             "background-color": "white",
             "color": "black",
             "display": "none",
@@ -25,14 +34,14 @@ $(document).ready(function () {
             "z-index": 3
         });
         notice.fadeIn(400);
-        timer = setTimeout(function () {
-            notice.remove();
-            $noticeCount--;
-            $("div[id*='notice_']").each(function () {
-                $(this).css("top", "-=50px");
-            });
-        }, 5000);
         $noticeCount++;
+        timer = setTimeout(function () {
+            if ($("div[id*='notice_0']").is("div") === false) {
+                $noticeCount = 0;
+            }
+            notice.remove();
+        }, 2000);
+        $("#cart").submit();
     });
 
     $("#productQuantity").change(function () {
@@ -67,16 +76,25 @@ $(document).ready(function () {
 
     // Jquery for div similarProduct, product and content
     $("#similarProduct button.addCart, #product button.addCart, #content button.addCart").click(function () {
-        var amountValue = $(".navbar-inverse .fa.fa-shopping-cart.fa-3x").prev();
-        var amount = parseInt(amountValue.text());
-        amount++;
-        amountValue.text(amount);
-        $("body").append("<div id='notice'></div>");
-        var notice = $("#notice");
+        $("#IDProduct").val($(this).attr("data"));
+        $("#QuantityProduct").val(1);
+
+        var amount = $(".navbar-inverse .fa.fa-shopping-cart.fa-3x").prev();
+        amount.text(parseInt(amount.text()) + 1);
+
+        $("body").append("<div id='notice_" + $noticeCount + "'></div>");
+        var notice = $("div[id*='notice_" + $noticeCount + "']");
+        var message = "Đã thêm 1 <b>" + $(this).parent().children(".productName").text() + "</b> vào giỏ hàng";
+        notice.append(message);
+        if ($noticeCount === 0) {
+            height = 10;
+        } else {
+            height += notice.height() + 50;
+        }
         notice.css({
             "position": "fixed",
             "right": 10,
-            "top": 10,
+            "top": height + 10,
             "background-color": "white",
             "color": "black",
             "display": "none",
@@ -84,11 +102,15 @@ $(document).ready(function () {
             "z-index": 3
         });
         notice.fadeIn(400);
-        var message = "Đã thêm <b>" + $(this).parent().children(".productName").text() + "</b> vào giỏ hàng";
-        notice.append(message);
-        setTimeout(function () {
-            $("#notice").remove();
-        }, 5000);
+        timer = setTimeout(function () {
+            if ($("div[id*='notice_0']").is("div") === false) {
+                $noticeCount = 0;
+            }
+            notice.remove();
+        }, 2000);
+        $noticeCount++;
+
+        $("#cart").submit();
     });
 
     // Jquery for all Page

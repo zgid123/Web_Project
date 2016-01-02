@@ -1,26 +1,33 @@
 <?php
 require_once 'entities/Cart.php';
+require_once 'entities/Product.php';
 
-if (isset($_POST["cart"])) {
-    
+if (isset($_POST["IDProduct"])) {
+    Cart::addItem($_POST["IDProduct"], $_POST["QuantityProduct"]);
 }
 ?>
 
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
-        <form id="cart" method="post">
+        <form id="cart" method="post" name="cart">
             <input id="IDProduct" name="IDProduct" type="hidden" />
             <input id="QuantityProduct" name="QuantityProduct" type="hidden" />
         </form>
-        <button class="nav navbar-nav navbar-right">
-            <span class="badge"><b>0</b></span><i class="fa fa-shopping-cart fa-3x"></i>
-        </button>
+        <a href="?action=cart" class="nav navbar-nav navbar-right">
+            <span class="badge"><b><?php echo Cart::count(); ?></b></span><i class="fa fa-shopping-cart fa-3x"></i>
+        </a>
         <div class="dropdown">
-            <ul class="dropdown-menu pull-right">
-                Chưa có sản phẩm
-            </ul>
+            <div class="dropdown-menu pull-right">
+                <?php
+                $amount = Cart::count();
+                if ($amount === 0) {
+                    echo "Chưa có sản phẩm";
+                } else {
+                    echo "Hiện có $amount sản phẩm";
+                }
+                ?>
+            </div>
         </div>
-
 
         <ul class = "nav navbar-nav navbar-right">
             <?php

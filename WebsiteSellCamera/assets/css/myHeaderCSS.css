@@ -14,9 +14,11 @@ button.nav.navbar-nav.navbar-right:visited{
     outline: none;
 }
 
-button.nav.navbar-nav.navbar-right{
+a.nav.navbar-nav.navbar-right{
     border: 0px;
     height: 50px;
+    margin: 0px -10px 0px 0px;
+    padding-top: 3px;
 }
 
 .navbar-nav>.fa-shopping-cart{

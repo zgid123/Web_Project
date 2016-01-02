@@ -45,6 +45,22 @@
                             <div class="col-md-4">
                                 <p>Số lượt xem: <?php echo $product->getViewed(); ?></p>
                                 <p>Số lượng bán: <?php echo $product->getBought(); ?></p>
+                                <p>
+                                    Tình trạng: 
+                                    <?php
+                                    if ($product->getQuantity() > 0) {
+                                        $isEnable = true;
+                                        ?>
+                                        <span class="greenColor"><?php echo "Còn hàng"; ?></span>
+                                        <?php
+                                    } else {
+                                        $isEnable = false;
+                                        ?>
+                                        <span class="redColor"><?php echo "Hết hàng"; ?></span>
+                                        <?php
+                                    }
+                                    ?>
+                                </p>
                             </div>
                         </div>
 
@@ -62,7 +78,8 @@
                             </div>
 
                             <div id="btnAddCart" class="form-group col-md-6">
-                                <button id="" class="addCart" name="addCart">
+                                <button id="" class="addCart" name="addCart" data="<?php echo $product->getProID(); ?>" 
+                                        <?php echo $isEnable === true ? "" : "disabled" ?>>
                                     <i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i>
                                 </button>
                             </div>

@@ -14,7 +14,7 @@ $(document).ready(function () {
         }, 500);
     });
 
-    $("button.nav.navbar-nav.navbar-right").mousemove(function () {
+    $("a.nav.navbar-nav.navbar-right").mousemove(function () {
         var next = $(this).next();
         var top = $(this).height();
         next.addClass("open");
@@ -24,7 +24,7 @@ $(document).ready(function () {
         });
     });
 
-    $("button.nav.navbar-nav.navbar-right").mouseout(function () {
+    $("a.nav.navbar-nav.navbar-right").mouseout(function () {
         $(this).next().removeClass("open");
     });
 

@@ -58,3 +58,22 @@ $("div.dropdown>ul.dropdown-menu").mouseout(function () {
         "border-left": 1
     });
 });
+
+// Javascript for Header
+$("#cart").submit(function (event) {
+    var data = {};
+
+    $(this).find("input").each(function () {
+        var name = $(this).attr("name");
+        var value = $(this).val();
+        data[name] = value;
+    });
+
+    $.ajax({
+        url: "index.php",
+        type: 'POST',
+        data: data
+    });
+
+    event.preventDefault();
+});

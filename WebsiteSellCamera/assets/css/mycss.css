@@ -11,6 +11,10 @@ body>img{
     color: red;
 }
 
+.greenColor{
+    color: #00cc66;
+}
+
 #back-to-top{
     font-size: 55px;
     text-decoration: none;

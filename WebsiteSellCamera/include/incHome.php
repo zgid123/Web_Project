@@ -37,7 +37,7 @@
                                 echo " VNĐ";
                                 ?>
                             </div>
-                            <button id="" class="addCart" name="addCart">
+                            <button id="" class="addCart" name="addCart" data="<?php echo $productList[$i]->getProID(); ?>">
                                 <i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i>
                             </button>
                         </div>
@@ -72,7 +72,7 @@
                                 echo " VNĐ";
                                 ?>
                             </div>
-                            <button id="" class="addCart" name="addCart">
+                            <button id="" class="addCart" name="addCart" data="<?php echo $productList[$i]->getProID(); ?>">
                                 <i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i>
                             </button>
                         </div>
@@ -113,7 +113,7 @@
                                 echo " VNĐ";
                                 ?>
                             </div>
-                            <button id="" class="addCart" name="addCart">
+                            <button id="" class="addCart" name="addCart" data="<?php echo $topSellList[$i]->getProID(); ?>">
                                 <i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i>
                             </button>
                         </div>
@@ -141,7 +141,7 @@
                                 echo " VNĐ";
                                 ?>
                             </div>
-                            <button id="" class="addCart" name="addCart">
+                            <button id="" class="addCart" name="addCart" data="<?php echo $topSellList[$i]->getProID(); ?>">
                                 <i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i>
                             </button>
                         </div>
@@ -182,7 +182,7 @@
                                 echo " VNĐ";
                                 ?>
                             </div>
-                            <button id="" class="addCart" name="addCart">
+                            <button id="" class="addCart" name="addCart" data="<?php echo $topViewList[$i]->getProID(); ?>">
                                 <i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i>
                             </button>
                         </div>
@@ -210,7 +210,7 @@
                                 echo " VNĐ";
                                 ?>
                             </div>
-                            <button id="" class="addCart" name="addCart">
+                            <button id="" class="addCart" name="addCart" data="<?php echo $topViewList[$i]->getProID(); ?>">
                                 <i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i>
                             </button>
                         </div>
