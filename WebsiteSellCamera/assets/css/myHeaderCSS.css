@@ -64,19 +64,26 @@ a.nav.navbar-nav.navbar-right{
 
 #userName{
     border: 0px;
+    background-color: inherit !important;
 }
 
-#userName>li>a{
+#userName>li>label{
     border: 0px;
     border-radius: 4px !important;
     color: white;
     margin: 0px;
+    padding: 6px 15px 6px 15px;
 }
 
-#userName>li>a:hover{
+#userName>li>label:hover{
     background-color: #00b2b3 !important;
 }
 
-#userName>li>a:visited{
-    background-color: #336699;
+div.dropdown>ul>li>a:hover{
+    background-color: #00b2b3 !important;
+    color: white;
+}
+
+#userName>li>label:visited{
+    background-color: #336699 !important;
 }

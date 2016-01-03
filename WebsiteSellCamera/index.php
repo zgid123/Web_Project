@@ -57,7 +57,7 @@ and open the template in the editor.
 
                     $hasNotice = true;
 
-                    if (isset($_GET["action"]) == true && $_GET["action"] === "register") {
+                    if (isset($_GET["action"]) == true && $_GET["action"] == "register") {
                         Provider::Redirect("index.php");
                     }
                 } else {
@@ -67,6 +67,10 @@ and open the template in the editor.
         } else {
             if (isset($_POST["btnLogout"])) {
                 Provider::destroy();
+                if (isset($_GET["action"]) == true &&
+                        ($_GET["action"] === "profile" || $_GET["action"] === "security")) {
+                    Provider::Redirect("index.php");
+                }
             }
         }
         if (isset($_POST["reload"])) {
@@ -115,6 +119,15 @@ and open the template in the editor.
                             case "product":
                                 include_once("include/incProduct.php");
                                 break;
+                            case "cart":
+                                include_once("include/incCart.php");
+                                break;
+                            case "profile":
+                                include_once("include/incProfile.php");
+                                break;
+                            case "security":
+                                include_once("include/incSecurity.php");
+                                break;
                             default:
                                 $action = isset($_GET["catID"]) ? $_GET["catID"] : "";
 
@@ -122,6 +135,7 @@ and open the template in the editor.
                                     include_once ("include/incProduct.php");
                                 } else {
                                     $action = isset($_GET["mf"]) ? $_GET["mf"] : "";
+
                                     if (is_numeric($action)) {
                                         include_once ("include/incProduct.php");
                                     } else {
@@ -130,12 +144,18 @@ and open the template in the editor.
                                         if (is_numeric($action)) {
                                             include_once ("include/incProduct.php");
                                         } else {
-                                            $action = isset($_GET["pro"]) ? $_GET["pro"] : "";
+                                            $action = isset($_GET["page"]) ? $_GET["page"] : "";
 
                                             if (is_numeric($action)) {
-                                                include_once ("include/incDetail.php");
+                                                include_once("include/incProduct.php");
                                             } else {
-                                                include_once("include/incHome.php");
+                                                $action = isset($_GET["pro"]) ? $_GET["pro"] : "";
+
+                                                if (is_numeric($action)) {
+                                                    include_once ("include/incDetail.php");
+                                                } else {
+                                                    include_once("include/incHome.php");
+                                                }
                                             }
                                         }
                                     }
@@ -152,22 +172,6 @@ and open the template in the editor.
                             </div>
                             <form><input type="hidden" id="reload" name="reload" value="" /></form>
                         </div>
-
-                        <script type="text/javascript">
-                            $(function () {
-                                var time;
-                                var timer = setInterval(function () {
-                                    time = $("#reload").parent().prev().children("span").text();
-                                    time--;
-                                    $("#reload").parent().prev().children("span").text(time);
-                                }, 1000);
-
-                                setTimeout(function () {
-                                    $("#reload").parent().submit();
-                                    clearInterval(timer);
-                                }, 3000);
-                            });
-                        </script>
                         <?php
                         unset($hasNotice);
                     }

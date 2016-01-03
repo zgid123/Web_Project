@@ -130,6 +130,52 @@ class User {
         DataProvider::ExecuteQuery($query);
     }
 
+    public function update() {
+        $id = $this->ID;
+        $username = str_replace("'", "''", $this->Username);
+        $password = md5($this->Password);
+        $firstName = str_replace("'", "''", $this->FirstName);
+        $lastName = str_replace("'", "''", $this->LastName);
+        $email = str_replace("'", "''", $this->Email);
+        $address = str_replace("'", "''", $this->Address);
+        $phone = str_replace("'", "''", $this->PhoneNumber);
+        $permission = $this->Permission;
+
+        $query = "update users "
+                . "set Username = $username, Password = $password, FirstName = $firstName, LastName = $lastName, "
+                . "Email = $email, PhoneNumber = $phone, Address = $address, Permission = $permission "
+                . "where ID = $id";
+
+        DataProvider::ExecuteQuery($query);
+    }
+
+    public function updateInfor() {
+        $id = $this->ID;
+        $firstName = str_replace("'", "''", $this->FirstName);
+        $lastName = str_replace("'", "''", $this->LastName);
+        $email = str_replace("'", "''", $this->Email);
+        $address = str_replace("'", "''", $this->Address);
+        $phone = str_replace("'", "''", $this->PhoneNumber);
+
+        $query = "update users "
+                . "set FirstName = '$firstName', LastName = '$lastName', "
+                . "Email = '$email', PhoneNumber = '$phone', Address = '$address' "
+                . "where ID = $id";
+
+        DataProvider::ExecuteQuery($query);
+    }
+
+    public function updatePassword() {
+        $id = $this->ID;
+        $password = $this->Password;
+
+        $query = "update users "
+                . "set Password = '$password' "
+                . "where ID = '$id'";
+
+        DataProvider::ExecuteQuery($query);
+    }
+
     public function login() {
         $result = false;
 

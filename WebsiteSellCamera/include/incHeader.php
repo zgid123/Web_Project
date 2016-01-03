@@ -23,7 +23,11 @@ if (isset($_POST["IDProduct"])) {
                 if ($amount === 0) {
                     echo "Chưa có sản phẩm";
                 } else {
-                    echo "Hiện có $amount sản phẩm";
+                    echo "Hiện có ";
+                    ?>
+                    <span><?php echo "$amount"; ?></span>
+                    <?php
+                    echo " sản phẩm";
                 }
                 ?>
             </div>
@@ -62,9 +66,17 @@ if (isset($_POST["IDProduct"])) {
                 <div class="form-group">
                     <ul id="userName" class="nav nav-tabs">
                         <li role="presentation" class="">
-                            <a href="#">Chào, <?php echo $user->getFirstName(); ?></a>
+                            <label>Chào, <?php echo $user->getFirstName(); ?></label>
                         </li>
                     </ul>
+
+                    <div class="dropdown">
+                        <ul class="dropdown-menu">
+                            <li><a href="?action=profile">Thông tin cá nhân</a></li>
+
+                            <li><a href="?action=security">Đổi mật khẩu</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <?php
             }

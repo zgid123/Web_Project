@@ -17,6 +17,8 @@ $(document).ready(function () {
         quantity += parseInt(amount.text());
         amount.text(quantity);
 
+        $(".dropdown-menu.pull-right>span").text(quantity);
+
         notice.append(message);
         if ($noticeCount === 0) {
             height = 10;
@@ -81,6 +83,8 @@ $(document).ready(function () {
 
         var amount = $(".navbar-inverse .fa.fa-shopping-cart.fa-3x").prev();
         amount.text(parseInt(amount.text()) + 1);
+
+        $(".dropdown-menu.pull-right>span").text(amount.text());
 
         $("body").append("<div id='notice_" + $noticeCount + "'></div>");
         var notice = $("div[id*='notice_" + $noticeCount + "']");

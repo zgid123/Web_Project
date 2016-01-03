@@ -59,7 +59,7 @@
     <form class="form-inline navbar-right">
         <div class="input-group">
             <input type="text" class="form-control" placeholder="Tìm kiếm..." id="searchBar" />
-            <span class="input-group-addon"><a href="#" class="fa fa-search fa-lg"></a></span>
+            <span class="input-group-addon"><a href="?action=search" class="fa fa-search fa-lg"></a></span>
         </div>
     </form>
 </ul>
