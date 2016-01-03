@@ -132,18 +132,18 @@ $("#reg-form").ready(function () {
         var regHeader = $("#reg-header");
         regHeader.find("div.redColor").remove();
         listRequired.each(function () {
-            $errorCount = this.value === "" ? 1 : 0;
+            $errorCount = $(this).val() === "" ? 1 : 0;
             if ($errorCount === 1)
                 $(this).parent().addClass("has-error");
         });
-        if ($errorCount === 1) {
+        $errorCount = $(this).find(".has-error").length;
+        if ($errorCount >= 1) {
             regHeader.append("<div class='redColor'>Đăng ký không thành công. Vui lòng nhập đầy đủ thông tin.</div>");
             $('body').animate({
                 scrollTop: $("#reg-header").offset().top
             }, 600);
             return false;
         }
-        return true;
     });
 
     // For reload page

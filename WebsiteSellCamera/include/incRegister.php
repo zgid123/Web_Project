@@ -141,7 +141,7 @@ if ($isSuccess == false) {
             <br/>
             Tự động quay về trang chủ sau <span>3</span> giây
         </div>
-        <form><input type="hidden" id="reload" name="reload" value="5" /></form>
+        <form><input type="hidden" id="reload" name="reload" value="" /></form>
     </div>
     <?php
 }

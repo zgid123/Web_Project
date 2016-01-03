@@ -20,8 +20,10 @@ class Cart {
     public static function count() {
         $result = 0;
 
-        foreach ($_SESSION["Cart"] as $ProID => $Quantity) {
-            $result += $Quantity;
+        if (isset($_SESSION["Cart"])) {
+            foreach ($_SESSION["Cart"] as $ProID => $Quantity) {
+                $result += $Quantity;
+            }
         }
 
         return $result;
