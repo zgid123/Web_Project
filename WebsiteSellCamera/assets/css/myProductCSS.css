@@ -30,3 +30,28 @@
 #product>.panel-body>.product>.addCart>.fa-shopping-cart{
     font-size: 18px;
 }
+
+#product>.panel.panel-body{
+    margin-bottom: 0px;
+}
+
+#list{
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+#paging{
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+.pagination>li>a>label{
+    margin: 0px;
+    width: 8px !important;
+    height: 20px !important;
+    text-align: center;
+}
+
+.pagination{
+    margin: 20px 20px 5px 20px;
+}
