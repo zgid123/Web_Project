@@ -35,10 +35,6 @@
     background-color: white;
 }
 
-#content .productImg{
-    height: 160px;
-}
-
 #content div.product>.productName{
     overflow: hidden;
     white-space: nowrap;
@@ -74,8 +70,12 @@
     color: white;
 }
 
-.addCart:hover{
+.addCart:not(.nohover):hover{
     background-color: #0033cc;
+}
+
+.nohover{
+    background-color: lightgray;
 }
 
 .btnDetail{

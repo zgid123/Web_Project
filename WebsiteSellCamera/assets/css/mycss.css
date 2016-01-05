@@ -29,3 +29,12 @@ body>img{
 #back-to-top:hover{
     color: rgba(0, 76, 77, 3)!important;
 }
+
+.productImg{
+    height: 160px;
+}
+
+.img-soldout{
+    position: absolute;
+    padding: 0px 0px 0px 5px;
+}

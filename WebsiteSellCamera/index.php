@@ -33,12 +33,53 @@ and open the template in the editor.
         <link href="assets/css/myProductCSS.css" rel="stylesheet" type="text/css"/>
         <link href="assets/css/myDetailCSS.css" rel="stylesheet" type="text/css"/>
         <link href="assets/css/mycss.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/myCartCSS.css" rel="stylesheet" type="text/css"/>
     </head>
 
     <body>
         <?php
         require_once 'Utils/Provider.php';
         require_once 'entities/User.php';
+        require_once 'entities/Cart.php';
+        require_once 'entities/Product.php';
+        require_once 'entities/Order.php';
+        require_once 'entities/OrderDetail.php';
+
+        $paySuccess = false;
+
+        if (isset($_POST["btnPay"])) {
+            $total = $_POST["btnPay"];
+            $order = new Order(-1, time(), $_SESSION["UserID"], $total);
+
+            $order->insert();
+            
+            print_r($order);
+
+            foreach ($_SESSION["Cart"] as $proID => $Quantity) {
+                $price = Product::getPriceByProID($proID);
+                $amount = $price * $Quantity;
+
+                $detail = new OrderDetail(-1, $order->getOrderID(), $proID, $Quantity, $price, $amount);
+
+                $detail->insert();
+            }
+
+            Cart::destroyCart();
+
+            $paySuccess = true;
+        }
+
+        if (isset($_POST["Method"])) {
+            if ($_POST["Method"] === "Update") {
+                Cart::updateItem($_POST["IDProduct"], $_POST["QuantityProduct"]);
+            } elseif ($_POST["Method"] === "Add") {
+                Cart::addItem($_POST["IDProduct"], $_POST["QuantityProduct"]);
+            } else {
+                Cart::removeItem($_POST["IDProduct"]);
+            }
+        }
+
+        Cart::updateCart();
 
         if (Provider::IsLogged() === false) {
             if (isset($_POST["btnLogin"])) {
@@ -51,9 +92,10 @@ and open the template in the editor.
 
                 if ($result) {
                     $_SESSION["Username"] = $u->getUsername();
+                    $_SESSION["UserID"] = $u->getID();
 
                     $expire = time() + 15 * 24 * 60 * 60;
-                    setcookie("UserName", $username, $expire);
+                    setcookie("Username", $username, $expire);
 
                     $hasNotice = true;
 
@@ -154,6 +196,8 @@ and open the template in the editor.
                                                 if (is_numeric($action)) {
                                                     include_once ("include/incDetail.php");
                                                 } else {
+
+                                                    $_SESSION["PreviousPage"] = $_SERVER['PHP_SELF'];
                                                     include_once("include/incHome.php");
                                                 }
                                             }
@@ -187,11 +231,13 @@ and open the template in the editor.
         </div>
 
         <script src="assets/javascripts/jquery-2.1.4.min.js" type="text/javascript"></script>
+        <script src="assets/javascripts/jquery.number.min.js" type="text/javascript"></script>
         <script src="assets/javascripts/bootstrap.min.js" type="text/javascript"></script>
         <script src="assets/javascripts/myJavascript.js" type="text/javascript"></script>
         <script src="assets/javascripts/myRegisterJavascript.js" type="text/javascript"></script>
         <script src="assets/javascripts/myMenuJavascript.js" type="text/javascript"></script>
         <script src="assets/javascripts/myProductJavascript.js" type="text/javascript"></script>
+        <script src="assets/javascripts/myCartJavascript.js" type="text/javascript"></script>
     </body>
     <!-- InstanceEnd -->
 </html>

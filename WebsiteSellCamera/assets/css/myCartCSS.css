@@ -1,0 +1,74 @@
+#cart-form{
+    margin: 15px 0px 20px 0px;
+}
+
+#cart-form>.panel.panel-primary>.panel-heading{
+    font-size: 30px;
+}
+
+#cart-form>.panel.panel-primary>#cart-form-title.panel-body{
+    padding: 15px 12px 0px 12px;
+}
+
+#cart-form>.panel.panel-primary>#cart-form-content.panel-body{
+    padding: 0px 12px 10px 12px;
+}
+
+#cart-form>.panel.panel-primary>.panel-body>.title{
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+}
+
+#cart-form>.panel.panel-primary>.hr-heading{
+    margin: 20px;
+    border: 1px solid;
+}
+
+#cart-form>.panel.panel-primary>.hr-content{
+    margin: 5px 20px 5px 20px;
+}
+
+#cart-form>.panel.panel-primary>.panel-body>.content{
+    text-align: center;
+    margin: 0px 5px 0px 5px;
+}
+#cart-form>.panel.panel-primary>.panel-body>.content>.cart-text{
+    position: relative;
+    -webkit-transform: translateY(70%);
+    -ms-transform: translateY(70%);
+    transform: translateY(70%);
+}
+
+.cart-numericUpDown{
+    position: relative;
+    -webkit-transform: translateY(-55%);
+    -ms-transform: translateY(-55%);
+    transform: translateY(-55%);
+}
+
+.cart-numericUpDown button{
+    z-index: 1 !important;
+    width: 40px;
+    text-align: center;
+}
+
+#cart-form .btn-remove{
+    position: relative;
+    -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    transform: translateY(50%); 
+}
+
+#cart-form div.content:hover{
+    background-color: lightgray;
+}
+
+#cart-form #cart-form-button{
+    margin-top: 10px;
+}
+
+#cart-form #cart-form-button>button, #cart-form #cart-form-button>a{
+    font-size: 20px;
+    text-align: center;
+}

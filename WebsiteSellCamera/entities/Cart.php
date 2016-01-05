@@ -29,6 +29,32 @@ class Cart {
         return $result;
     }
 
+    public static function updateCart() {
+        if (Cart::count() > 0) {
+            foreach ($_SESSION["Cart"] as $proID => $Quantity) {
+                $result = Product::getQuantityByProID($proID);
+
+                if ($Quantity > $result) {
+                    $_SESSION["Cart"][$proID] = $result;
+                }
+            }
+        }
+    }
+
+    public static function totalPrice() {
+        $total = 0;
+
+        if (Cart::count() > 0) {
+            foreach ($_SESSION["Cart"] as $proID => $Quantity) {
+                $result = Product::getPriceByProID($proID);           
+                        
+                $total += $result * $Quantity;
+            }
+        }
+        
+        return $total;
+    }
+
     public static function addItem($ProID, $Quantity) {
         if (array_key_exists($ProID, $_SESSION["Cart"])) {
             $_SESSION["Cart"][$ProID] += $Quantity;
