@@ -15,6 +15,12 @@ $(document).ready(function () {
     });
 
     // Javascript for Header
+    $("#login").submit(function () {
+        if ($("#username").val() === "" || $("#password").val() === "") {
+            return false;
+        }
+    });
+
     $("a.nav.navbar-nav.navbar-right").mousemove(function () {
         var next = $(this).next();
         var top = $(this).height();

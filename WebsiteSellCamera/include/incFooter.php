@@ -1,20 +1,41 @@
+<?php
+require_once 'entities/Category.php';
+require_once 'entities/Manufacturer.php';
+
+$category = Category::getCategory();
+$manufacturer = Manufacturer::getManufacturer();
+?>
 <div class="panel">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-2">
                 <p>Danh mục</p>
-                <p><a href="#productList">Sản phẩm</a></p>
-                <p><a href="#compactCamera">Máy ảnh Compact</a></p>
-                <p><a href="#dslrCamera">Máy ảnh DSLR</a></p>
-                <p><a href="#evilCamera">Máy ảnh EVIL</a></p>
-                <p><a href="#milcCamera">Máy ảnh MILC</a></p>
+                <p><a href="?action=product">Sản phẩm</a></p>
+                <?php
+                for ($i = 0; $i < count($category); $i++) {
+                    ?>
+                    <p>
+                        <a href="?catID=<?php echo $category[$i]->getCatID(); ?>">
+                            Máy ảnh <?php echo $category[$i]->getCatName(); ?>
+                        </a>
+                    </p>
+                    <?php
+                }
+                ?>
             </div>
             <div class="col-md-2">
                 <p>Nhà sản xuất</p>
-                <p><a href="#canonCompany">Canon</a></p>
-                <p><a href="#fujiCompany">Fujifilm</a></p>
-                <p><a href="#nikonCompany">Nikon</a></p>
-                <p><a href="#sonyCompany">Sony</a></p>
+                <?php
+                for ($i = 0; $i < count($manufacturer); $i++) {
+                    ?>
+                    <p>
+                        <a href="?mf=<?php echo $manufacturer[$i]->getMFID(); ?>">
+                            <?php echo $manufacturer[$i]->getMFName(); ?>
+                        </a>
+                    </p>
+                    <?php
+                }
+                ?>
             </div>
             <div class="col-md-5">
                 <p class="center">Đồ án môn học</p>

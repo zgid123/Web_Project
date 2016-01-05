@@ -19,11 +19,14 @@ a.nav.navbar-nav.navbar-right{
     height: 50px;
     margin: 0px -10px 0px 0px;
     padding-top: 3px;
+    text-align: center;
 }
 
-.navbar-nav>.fa-shopping-cart{
+.navbar-nav>.fa-shopping-bag{
     color: white;
     padding-right: 5px;
+    margin-left: 20px;
+    position: relative;
 }
 
 .navbar.navbar-inverse .dropdown{
@@ -39,11 +42,13 @@ a.nav.navbar-nav.navbar-right{
 }
 
 .navbar-nav .badge{
-    background-color: white;
+    background-color: transparent;
     color: red;
     position: absolute;
-    z-index: 1;
-    margin: 9px 0px 0px 9px;
+    z-index: 2;
+    text-align: center;
+    padding: 3px 0px 3px 0px;
+    font-size: 16px;
 }
 
 .fa-home{

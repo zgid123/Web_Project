@@ -12,6 +12,7 @@
  * @author Lucifer
  */
 require_once 'entities/User.php';
+require_once 'entities/Cart.php';
 
 class Provider {
 
@@ -50,7 +51,7 @@ class Provider {
         $_SESSION["Username"] = null;
         unset($_SESSION["Username"]);
 
-        unset($_SESSION["Cart"]);
+        Cart::destroyCart();
 
         if (isset($_COOKIE["Username"])) {
             unset($_COOKIE["Username"]);
