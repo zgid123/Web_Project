@@ -4,6 +4,7 @@
         require_once 'entities/Product.php';
         require_once 'entities/Manufacturer.php';
         require_once 'entities/Category.php';
+        $_SESSION["PreviousPage"] = "https://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 
         Product::updateProductViewed($action);
 
@@ -25,7 +26,7 @@
 
                     <div id="productNote" class="col-md-9">
                         <div class="col-md-12">
-                            <div class="col-md-8">
+                            <div class="col-md-7">
                                 <p>Nhà sản xuất: <?php echo $manufacturer->getMFName(); ?></p>
                                 <p>Xuất xứ: <?php echo $product->getMadeIn(); ?></p>
                                 <p>Loại: <?php echo $category->getCatName(); ?></p>
@@ -42,7 +43,7 @@
                                 </p>
                             </div>
 
-                            <div class="col-md-4">
+                            <div class="col-md-5">
                                 <p>Số lượt xem: <?php echo $product->getViewed(); ?></p>
                                 <p>Số lượng bán: <?php echo $product->getBought(); ?></p>
                                 <p>
@@ -78,8 +79,8 @@
                             </div>
 
                             <div id="btnAddCart" class="form-group col-md-6">
-                                <button id="" class="addCart" name="addCart" data="<?php echo $product->getProID(); ?>" 
-                                        <?php echo $isEnable === true ? "" : "disabled" ?>>
+                                <button id="" class="addCart <?php echo $isEnable === true ? "" : 'nohover" disabled "'; ?>" 
+                                        name="addCart" data="<?php echo $product->getProID(); ?>" >
                                     <i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i>
                                 </button>
                             </div>
@@ -120,6 +121,11 @@
 
                     $similarProduct = Product::get5ProductsByCatID($product->getCatID(), $product->getProID());
                     for ($i = 0; $i < count($similarProduct); $i++) {
+                        if ($similarProduct[$i]->getQuantity() > 0) {
+                            $isEnable = true;
+                        } else {
+                            $isEnable = false;
+                        }
                         ?>
                         <div class="product">
                             <a class="btnDetail" href="?pro=<?php echo $similarProduct[$i]->getProID(); ?>">
@@ -137,7 +143,8 @@
                                 echo " VNĐ";
                                 ?>
                             </div>
-                            <button id="" class="addCart" name="addCart">
+                            <button id="" class="addCart <?php echo $isEnable === true ? "" : 'nohover" disabled "'; ?>" 
+                                    name="addCart" data="<?php echo $similarProduct[$i]->getProID(); ?>">
                                 <i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i>
                             </button>
                         </div>
@@ -151,6 +158,11 @@
                     $similarProduct = Product::get5ProductsByMFID($product->getManufacturerID(), $product->getProID());
 
                     for ($i = 0; $i < count($similarProduct); $i++) {
+                        if ($similarProduct[$i]->getQuantity() > 0) {
+                            $isEnable = true;
+                        } else {
+                            $isEnable = false;
+                        }
                         ?>
                         <div class="product">
                             <a class="btnDetail" href="?pro=<?php echo $similarProduct[$i]->getProID(); ?>">
@@ -168,7 +180,8 @@
                                 echo " VNĐ";
                                 ?>
                             </div>
-                            <button id="" class="addCart" name="addCart">
+                            <button id="" class="addCart <?php echo $isEnable === true ? "" : 'nohover" disabled "'; ?>" 
+                                    name="addCart" data="<?php echo $similarProduct[$i]->getProID(); ?>">
                                 <i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i>
                             </button>
                         </div>

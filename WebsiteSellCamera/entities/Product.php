@@ -156,8 +156,10 @@ class Product {
 
         $result = DataProvider::ExecuteQuery($query);
 
-        if ($row = $result->fetch_assoc()) {
-            $product = new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"]);
+        if ($result) {
+            if ($row = $result->fetch_assoc()) {
+                $product = new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"]);
+            }
         }
 
         return $product;
@@ -244,6 +246,36 @@ class Product {
 
         while ($row = $products->fetch_assoc()) {
             array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"]));
+        }
+
+        return $result;
+    }
+
+    public static function getQuantityByProID($proID) {
+        $query = "Select Quantity "
+                . "From products Where ProID = $proID";
+
+        $result = DataProvider::ExecuteQuery($query);
+
+        if ($result) {
+            if ($row = $result->fetch_assoc()) {
+                $result = $row["Quantity"];
+            }
+        }
+
+        return $result;
+    }
+
+    public static function getPriceByProID($proID) {
+        $query = "Select Price "
+                . "From products Where ProID = $proID";
+
+        $result = DataProvider::ExecuteQuery($query);
+
+        if ($result) {
+            if ($row = $result->fetch_assoc()) {
+                $result = $row["Price"];
+            }
         }
 
         return $result;

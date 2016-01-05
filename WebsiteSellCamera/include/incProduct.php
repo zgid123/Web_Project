@@ -2,6 +2,7 @@
     <div id="list" class="panel panel-body">
         <?php
         require_once 'entities/Product.php';
+        $_SESSION["PreviousPage"] = $_SERVER['REQUEST_URI'];
 
         if (isset($_GET["action"]) == true && $_GET["action"] == "product") {
             $allProduct = Product::getProducts();
@@ -34,12 +35,20 @@
                 $count = $page * 12 <= count($allProduct) ? $page * 12 : ($page * 12) - ($page * 12 - count($allProduct));
 
                 for ($i = $start; $i < $count; $i++) {
+                    $soldout = $allProduct[$i]->getQuantity() > 0 ? false : true;
                     ?>
                     <div class="product col-md-3">
                         <a class="btnDetail" href="?pro=<?php echo $allProduct[$i]->getProID(); ?>">
                             <i class="fa fa-search-plus"></i>
                         </a>
                         <div class="productImg">
+                            <?php
+                            if ($soldout === true) {
+                                ?>
+                                <img src="assets/images/soldout.png" class="img-responsive img-soldout pull-right" alt=""/>
+                                <?php
+                            }
+                            ?>
                             <img class = "img-reponsive" src = "<?php echo $allProduct[$i]->getURL(); ?>" alt = ""/>
                         </div>
                         <div id = "" class = "productName">
@@ -51,7 +60,8 @@
                             echo " VNĐ";
                             ?>
                         </div>
-                        <button id="" class="addCart" name="addCart">
+                        <button class="addCart <?php echo $soldout === true ? 'nohover" disabled "' : ""; ?>" 
+                                name="addCart" data="<?php echo $allProduct[$i]->getProID(); ?>">
                             <i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i>
                         </button>
                     </div>
@@ -59,12 +69,20 @@
                 }
             } else {
                 for ($i = 0; $i < count($allProduct); $i++) {
+                    $soldout = $allProduct[$i]->getQuantity() > 0 ? false : true;
                     ?>
                     <div class="product col-md-3">
                         <a class="btnDetail" href="?pro=<?php echo $allProduct[$i]->getProID(); ?>">
                             <i class="fa fa-search-plus"></i>
                         </a>
                         <div class="productImg">
+                            <?php
+                            if ($soldout === true) {
+                                ?>
+                                <img src="assets/images/soldout.png" class="img-responsive img-soldout pull-right" alt=""/>
+                                <?php
+                            }
+                            ?>
                             <img class = "img-reponsive" src = "<?php echo $allProduct[$i]->getURL(); ?>" alt = ""/>
                         </div>
                         <div id = "" class = "productName">
@@ -76,7 +94,8 @@
                             echo " VNĐ";
                             ?>
                         </div>
-                        <button id="" class="addCart" name="addCart">
+                        <button class="addCart <?php echo $soldout === true ? 'nohover" disabled "' : ""; ?>" 
+                                name="addCart" data="<?php echo $allProduct[$i]->getProID(); ?>">
                             <i class="fa fa-shopping-cart fa-3x">&emsp;THÊM VÀO GIỎ</i>
                         </button>
                     </div>

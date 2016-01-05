@@ -8,16 +8,11 @@ $(document).ready(function () {
         var quantity = parseInt($("#productQuantity").val());
         $("#IDProduct").val($(this).attr("data"));
         $("#QuantityProduct").val(quantity);
+        $("#cart>#Method").val("Add");
 
         $("body").append("<div id='notice_" + $noticeCount + "'></div>");
         var notice = $("div[id*='notice_" + $noticeCount + "']");
         var message = "Đã thêm " + quantity + " <b>" + $("#productName").text() + "</b> vào giỏ hàng";
-
-        var amount = $(".navbar-inverse .fa.fa-shopping-cart.fa-3x").prev();
-        quantity += parseInt(amount.text());
-        amount.text(quantity);
-
-        $(".dropdown-menu.pull-right>span").text(quantity);
 
         notice.append(message);
         if ($noticeCount === 0) {
@@ -80,11 +75,7 @@ $(document).ready(function () {
     $("#similarProduct button.addCart, #product button.addCart, #content button.addCart").click(function () {
         $("#IDProduct").val($(this).attr("data"));
         $("#QuantityProduct").val(1);
-
-        var amount = $(".navbar-inverse .fa.fa-shopping-cart.fa-3x").prev();
-        amount.text(parseInt(amount.text()) + 1);
-
-        $(".dropdown-menu.pull-right>span").text(amount.text());
+        $("#cart>#Method").val("Add");
 
         $("body").append("<div id='notice_" + $noticeCount + "'></div>");
         var notice = $("div[id*='notice_" + $noticeCount + "']");

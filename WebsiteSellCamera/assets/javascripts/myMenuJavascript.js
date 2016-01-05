@@ -13,6 +13,25 @@ $(".dropdown").mouseout(function () {
     $(this).removeClass("open");
 });
 
+var $top = $(".fa.fa-shopping-bag.fa-3x>span.badge").height() - 1.5;
+var $left = ($(".fa.fa-shopping-bag.fa-3x").width() - $(".fa.fa-shopping-bag.fa-3x>span.badge").width()) / 2;
+
+$(".fa.fa-shopping-bag.fa-3x>span.badge").css({
+    top: $top,
+    left: $left
+});
+
+$(".fa.fa-shopping-bag.fa-3x>span.badge").on("change", function () {
+    var $top = $(".fa.fa-shopping-bag.fa-3x>span.badge").height() - 1.5;
+
+    var left = ($(".fa.fa-shopping-bag.fa-3x").width() - $(".fa.fa-shopping-bag.fa-3x>span.badge").width()) / 2;
+
+    $(".fa.fa-shopping-bag.fa-3x>span.badge").css({
+        top: $top,
+        left: left
+    });
+});
+
 // Javascript for Left-Menu
 $(".dd-right").mousemove(function () {
     var next = $(this).next();
@@ -63,16 +82,54 @@ $("div.dropdown>ul.dropdown-menu").mouseout(function () {
 $("#cart").submit(function (event) {
     var data = {};
 
+    var url = $(location).attr('href');
+    url = url.substring(url.lastIndexOf("/") + 1, url.length).trim();
+
     $(this).find("input").each(function () {
         var name = $(this).attr("name");
         var value = $(this).val();
         data[name] = value;
     });
 
+    var method = $("#cart>#Method").val();
+
+    var newPage;
+
     $.ajax({
-        url: "index.php",
+        url: url,
         type: 'POST',
         data: data
+    }).always(function (data) {
+        newPage = data;
+
+        var amount = $(newPage).find(".navbar-inverse .fa.fa-shopping-bag.fa-3x").children("span.badge");
+        $(".navbar-inverse .fa.fa-shopping-bag.fa-3x").children("span.badge").text(amount.text());
+
+        $(".navbar-inverse .fa.fa-shopping-bag.fa-3x").children("span.badge").change();
+
+        $(".dropdown-menu.pull-right").text($(newPage).find(".dropdown-menu.pull-right").text());
+
+        if (method === "Update") {
+            $("#cart-form input[name*='cart-quantity']").parents(".cart-numericUpDown").parent().each(function () {
+                var mainID = $(this).parents(".content.row").find("button[name='cart-remove']").attr("data-proid");
+                var currentDiv = $(this);
+
+                $(newPage).find("#cart-form input[name*='cart-quantity']").parents(".cart-numericUpDown").parent().each(function () {
+                    var currentID = $(this).parents(".content.row").find("button[name='cart-remove']").attr("data-proid");
+                    if (mainID === currentID) {
+                        currentDiv.next().text($(this).next().text());
+                    }
+                });
+            });
+
+            $("#cart-form-content>#total>span").first().text($(newPage).find("#cart-form-content>#total>span").first().text());
+        } else if (method === "Remove") {
+            $("#cart-form #cart-form-content").replaceWith(($(newPage).find("#cart-form #cart-form-content")));
+        }
+
+        if ($("#cart-form").length > 0) {
+            $("#cart-form #btnPay").val($(newPage).find("#cart-form #btnPay").val());
+        }
     });
 
     event.preventDefault();

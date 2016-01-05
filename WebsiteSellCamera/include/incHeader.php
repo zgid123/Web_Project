@@ -1,33 +1,31 @@
-<?php
-require_once 'entities/Cart.php';
-require_once 'entities/Product.php';
-
-if (isset($_POST["IDProduct"])) {
-    Cart::addItem($_POST["IDProduct"], $_POST["QuantityProduct"]);
-}
-?>
-
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <form id="cart" method="post" name="cart">
             <input id="IDProduct" name="IDProduct" type="hidden" />
             <input id="QuantityProduct" name="QuantityProduct" type="hidden" />
+            <input id="Method" name="Method" type="hidden" />
         </form>
         <a href="?action=cart" class="nav navbar-nav navbar-right">
-            <span class="badge"><b><?php echo Cart::count(); ?></b></span><i class="fa fa-shopping-cart fa-3x"></i>
+            <i class="fa fa-shopping-bag fa-3x"><span class="badge"><b><?php echo Cart::count(); ?></b></span></i>
         </a>
         <div class="dropdown">
             <div class="dropdown-menu pull-right">
                 <?php
                 $amount = Cart::count();
                 if ($amount === 0) {
-                    echo "Chưa có sản phẩm";
+                    ?>
+                    <span><?php echo "Chưa có sản phẩm"; ?></span>
+                    <?php
                 } else {
                     echo "Hiện có ";
                     ?>
                     <span><?php echo "$amount"; ?></span>
                     <?php
                     echo " sản phẩm";
+                    ?>
+                    <hr />
+                    <p>Tổng tiền: <?php echo number_format(Cart::totalPrice()); ?> VNĐ</p>
+                    <?php
                 }
                 ?>
             </div>
@@ -43,7 +41,7 @@ if (isset($_POST["IDProduct"])) {
             ?>
         </ul>
 
-        <form class="navbar-form navbar-right" method="post">
+        <form id="login" class="navbar-form navbar-right" method="post">
             <?php
             if (Provider::IsLogged() === false) {
                 ?>
@@ -100,6 +98,20 @@ if (isset($_POST["IDProduct"])) {
                 ?>
             </div>
         </form>
+
+        <!--        <form id="search" class="navbar-form row">
+                    <div class="form-group col-md-offset-3 col-lg-offset-3">
+        
+        
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Tìm kiếm..." id="searchBar" name="searchBar" />
+                            <span class="input-group-addon"><a href="?action=search" class="fa fa-search fa-lg"></a></span>
+                        </div>
+                        <div class="input-group">
+        
+                        </div>
+                    </div>
+                </form>-->
     </div>
 </nav>
 
