@@ -42,14 +42,18 @@
 
 .cart-numericUpDown{
     position: relative;
-    -webkit-transform: translateY(-55%);
-    -ms-transform: translateY(-55%);
-    transform: translateY(-55%);
+    -webkit-transform: translateY(-47%);
+    -ms-transform: translateY(-47%);
+    transform: translateY(-47%);
 }
 
 .cart-numericUpDown button{
     z-index: 1 !important;
-    width: 40px;
+    width: 35px;
+    text-align: center;
+}
+
+.cart-numericUpDown input{
     text-align: center;
 }
 

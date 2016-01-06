@@ -23,7 +23,7 @@
 
 .list-group-item.title{
     text-align: center;
-    background-color: #538cc5;
+    background-color: #ff8080;
     color: white;
     font-weight: bold;
     border-radius: 0px;
@@ -44,7 +44,7 @@
 }
 
 .list-group-item.center>p.title{
-    background-color: #ff0000;
+    background-color: #006666;
     color: white;
     font-weight: normal;
 }

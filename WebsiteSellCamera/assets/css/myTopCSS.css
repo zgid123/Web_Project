@@ -4,10 +4,14 @@
 }
 
 .nav-pills{
-    background-color: #002266;
+    background-color: #640099;
 }
 
-.nav-pills li{
+.nav-pills a.btn-primary:visited,.nav-pills a.btn-primary:focus{
+    background-color: #337ab7 !important;
+}
+
+#top.nav-pills li{
     margin: 0px !important;
 }
 
@@ -44,4 +48,56 @@
 
 .list-group{
     margin-top: 15px;
+}
+
+#top>li.navbar-right>a.btn-primary{
+    border: 0px;
+}
+
+#search-bar-form{
+    background-color: white;
+    padding: 5px 10px 5px 10px;
+    margin: 0px;
+    text-align: center;
+    z-index: 2;
+}
+
+#search-bar-form .nav-pills{
+    background-color: white !important;
+}
+
+#search-bar-form .nav-pills>li{
+    margin: 0px 18px 0px 5px;
+}
+
+#search-bar-form label{
+    margin: 0px;
+}
+
+#search-bar-form>ul>li>label{
+    font-size: 20px;
+    -webkit-transform: translateY(15%);
+    -ms-transform: translateY(15%);
+    transform: translateY(15%);
+}
+
+#search-bar-form>ul>li>select{
+    padding: 6px 12px 6px 12px;
+    -webkit-transform: translateY(15%);
+    -ms-transform: translateY(15%);
+    transform: translateY(5%);
+}
+
+#search-bar-form>ul>li>a{
+    padding: 6px 11px 6px 11px;
+    color: #337ab7;
+    background-color: rgba(242, 242, 242, 0.5);
+}
+
+#search-bar-form>ul>li>a:hover, #search-bar-form>ul>li>a:visited{
+    background-color: rgba(242, 242, 242, 0.5) !important;
+}
+
+#search-bar-form .tinySpace{
+    margin: 0px 4px 0px -9px !important;
 }

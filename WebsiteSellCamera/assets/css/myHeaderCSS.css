@@ -1,6 +1,6 @@
 /* CSS for Header */
 .navbar-inverse{
-    background-color: #336699;
+    background-color: #232323 !important;
     border-radius: inherit;
 }
 
@@ -9,9 +9,14 @@
 }
 
 button.nav.navbar-nav.navbar-right, button.nav.navbar-nav.navbar-right:hover, 
-button.nav.navbar-nav.navbar-right:visited{
-    background-color: inherit !important;
+button.nav.navbar-nav.navbar-right:visited, #header .btn-primary:hover{
+    background-color: #595959 !important;
     outline: none;
+}
+
+#header .btn-primary{
+    background-color: #373737 !important;
+    border-color: #373737;
 }
 
 a.nav.navbar-nav.navbar-right{
@@ -69,7 +74,9 @@ a.nav.navbar-nav.navbar-right{
 
 #userName{
     border: 0px;
-    background-color: inherit !important;
+    background-color: #373737 !important;
+    margin-right: 15px;
+    border-radius: 3px;
 }
 
 #userName>li>label{
@@ -81,7 +88,7 @@ a.nav.navbar-nav.navbar-right{
 }
 
 #userName>li>label:hover{
-    background-color: #00b2b3 !important;
+    background-color: #595959 !important;
 }
 
 div.dropdown>ul>li>a:hover{
@@ -90,5 +97,5 @@ div.dropdown>ul>li>a:hover{
 }
 
 #userName>li>label:visited{
-    background-color: #336699 !important;
+    background-color: #595959 !important;
 }

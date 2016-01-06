@@ -52,7 +52,7 @@ and open the template in the editor.
             $order = new Order(-1, time(), $_SESSION["UserID"], $total);
 
             $order->insert();
-            
+
             print_r($order);
 
             foreach ($_SESSION["Cart"] as $proID => $Quantity) {
@@ -170,6 +170,9 @@ and open the template in the editor.
                             case "security":
                                 include_once("include/incSecurity.php");
                                 break;
+                            case "search":
+                                include_once("include/incProduct.php");
+                                break;
                             default:
                                 $action = isset($_GET["catID"]) ? $_GET["catID"] : "";
 
@@ -238,6 +241,7 @@ and open the template in the editor.
         <script src="assets/javascripts/myMenuJavascript.js" type="text/javascript"></script>
         <script src="assets/javascripts/myProductJavascript.js" type="text/javascript"></script>
         <script src="assets/javascripts/myCartJavascript.js" type="text/javascript"></script>
+        <script src="assets/javascripts/mySearchJavascript.js" type="text/javascript"></script>
     </body>
     <!-- InstanceEnd -->
 </html>

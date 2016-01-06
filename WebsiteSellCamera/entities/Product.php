@@ -281,4 +281,26 @@ class Product {
         return $result;
     }
 
+    public static function getProductsBySearching($proName, $catID, $mfID, $minPrice, $maxPrice) {
+        $query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn "
+                . "From products "
+                . "Where ProName Like '%$proName%' And CatID Like Case $catID When 0 Then '%' Else $catID End "
+                . "And ManufacturerID Like Case $mfID When 0 Then '%' Else $mfID End "
+                . "And Price >= ifnull($minPrice, 0) ";
+
+        if ($maxPrice != null) {
+            $query . "And Price <= $maxPrice";
+        }
+
+        $result = array();
+
+        $products = DataProvider::ExecuteQuery($query);
+
+        while ($row = $products->fetch_assoc()) {
+            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"]));
+        }
+
+        return $result;
+    }
+
 }

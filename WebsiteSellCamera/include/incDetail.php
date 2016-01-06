@@ -4,7 +4,7 @@
         require_once 'entities/Product.php';
         require_once 'entities/Manufacturer.php';
         require_once 'entities/Category.php';
-        $_SESSION["PreviousPage"] = "https://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+        $_SESSION["PreviousPage"] = $_SERVER['REQUEST_URI'];
 
         Product::updateProductViewed($action);
 
