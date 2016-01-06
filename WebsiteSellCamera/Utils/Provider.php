@@ -34,6 +34,7 @@ class Provider {
                 $u = User::getUserByUsername($username);
 
                 $_SESSION["Username"] = $u->getUsername();
+                $_SESSION["UserID"] = $u->getID();
 
                 $result = true;
             }

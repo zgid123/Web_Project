@@ -49,11 +49,9 @@ and open the template in the editor.
 
         if (isset($_POST["btnPay"])) {
             $total = $_POST["btnPay"];
-            $order = new Order(-1, time(), $_SESSION["UserID"], $total);
+            $order = new Order(-1, time(), $_SESSION["UserID"], str_replace(",", "", $total));
 
             $order->insert();
-
-            print_r($order);
 
             foreach ($_SESSION["Cart"] as $proID => $Quantity) {
                 $price = Product::getPriceByProID($proID);
