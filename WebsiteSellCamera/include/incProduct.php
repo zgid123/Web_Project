@@ -9,13 +9,17 @@
             if ($_GET["action"] == "product") {
                 $allProduct = Product::getProducts();
             } else if ($_GET["action"] == "search") {
-                $proName = isset($_POST["search-proName"]) ? $_POST["search-proName"] : "";
-                $catID = $_POST["search-catID"] !== "" ? $_POST["search-catID"] : 0;
-                $mfID = $_POST["search-mfID"] !== "" ? $_POST["search-mfID"] : 0;
-                $minPrice = $_POST["search-minPrice"] !== "" ? $_POST["search-minPrice"] : 0;
-                $maxPrice = $_POST["search-maxPrice"] !== "" ? $_POST["search-maxPrice"] : null;
+                if (!isset($_GET["page"])) {
+                    $proName = isset($_POST["search-proName"]) ? $_POST["search-proName"] : "";
+                    $catID = $_POST["search-catID"] !== "" ? $_POST["search-catID"] : 0;
+                    $mfID = $_POST["search-mfID"] !== "" ? $_POST["search-mfID"] : 0;
+                    $minPrice = $_POST["search-minPrice"] !== "" ? str_replace(",", "", $_POST["search-minPrice"]) : 0;
+                    $maxPrice = $_POST["search-maxPrice"] !== "" ? str_replace(",", "", $_POST["search-maxPrice"]) : null;
 
-                $allProduct = Product::getProductsBySearching($proName, $catID, $mfID, $minPrice, $maxPrice);
+                    $_SESSION["SearchKey"] = array($proName, $catID, $mfID, $minPrice, $maxPrice);
+                }
+
+                $allProduct = Product::getProductsBySearching($_SESSION["SearchKey"][0], $_SESSION["SearchKey"][1], $_SESSION["SearchKey"][2], $_SESSION["SearchKey"][3], $_SESSION["SearchKey"][4]);
             }
 
             $currentPage = basename($_SERVER['PHP_SELF']) . "?action=" . $_GET["action"];

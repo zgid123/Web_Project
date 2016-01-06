@@ -289,8 +289,10 @@ class Product {
                 . "And Price >= ifnull($minPrice, 0) ";
 
         if ($maxPrice != null) {
-            $query . "And Price <= $maxPrice";
+            $query .= "And Price <= $maxPrice ";
         }
+
+        $query .= "Order by Price ASC";
 
         $result = array();
 

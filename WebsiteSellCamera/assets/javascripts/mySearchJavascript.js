@@ -19,3 +19,6 @@ $("#top-search>a").click(function () {
         i.removeClass("fa-caret-square-o-up").addClass("fa-caret-square-o-down");
     }
 });
+
+$("#search-bar-form #search-minPrice, #search-bar-form #search-maxPrice").number(true, 0);
+

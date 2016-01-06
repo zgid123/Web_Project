@@ -71,7 +71,8 @@
                                     <span class="input-group-btn">
                                         <button id="decrease" class="btn btn-default">-</button>
                                     </span>
-                                    <input type="text" class="form-control" placeholder="" id="productQuantity" value="1" />
+                                    <input type="text" class="form-control" placeholder="" id="productQuantity" value="1"
+                                           max="<?php echo $product->getQuantity(); ?>"/>
                                     <span class="input-group-btn">
                                         <button id="increase" class="btn btn-default">+</button>
                                     </span>
