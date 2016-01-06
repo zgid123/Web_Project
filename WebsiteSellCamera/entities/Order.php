@@ -57,7 +57,9 @@ class Order {
     }
 
     public function insert() {
+        date_default_timezone_set("Asia/Ho_Chi_Minh");
         $d = date('Y-m-d H:i:s', $this->OrderDate);
+
         $userID = $this->UserID;
         $total = $this->Total;
 
