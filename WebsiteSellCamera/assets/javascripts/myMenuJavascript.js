@@ -4,7 +4,7 @@ $(document).ready(function () {
     });
 });
 
-// Javascript for Top-menu
+// Javascript for Header & top menu
 $(".dropdown").mousemove(function () {
     $(this).addClass("open");
 });

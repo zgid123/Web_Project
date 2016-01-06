@@ -1,11 +1,22 @@
 <div id="product" class="list-group">
+    <div class="panel-heading">Danh sách sản phẩm</div>
     <div id="list" class="panel panel-body">
         <?php
         require_once 'entities/Product.php';
         $_SESSION["PreviousPage"] = $_SERVER['REQUEST_URI'];
 
-        if (isset($_GET["action"]) == true && $_GET["action"] == "product") {
-            $allProduct = Product::getProducts();
+        if (isset($_GET["action"]) == true) {
+            if ($_GET["action"] == "product") {
+                $allProduct = Product::getProducts();
+            } else if ($_GET["action"] == "search") {
+                $proName = isset($_POST["search-proName"]) ? $_POST["search-proName"] : "";
+                $catID = $_POST["search-catID"] !== "" ? $_POST["search-catID"] : 0;
+                $mfID = $_POST["search-mfID"] !== "" ? $_POST["search-mfID"] : 0;
+                $minPrice = $_POST["search-minPrice"] !== "" ? $_POST["search-minPrice"] : 0;
+                $maxPrice = $_POST["search-maxPrice"] !== "" ? $_POST["search-maxPrice"] : null;
+
+                $allProduct = Product::getProductsBySearching($proName, $catID, $mfID, $minPrice, $maxPrice);
+            }
 
             $currentPage = basename($_SERVER['PHP_SELF']) . "?action=" . $_GET["action"];
         } else {
@@ -24,8 +35,10 @@
             }
         }
 
-        if (!isset($allProduct)) {
-            echo "Không có sản phẩm";
+        $pageCount = 0;
+
+        if (!isset($allProduct) || count($allProduct) <= 0) {
+            echo "<p style='padding: 15px;'>Không có sản phẩm</p>";
         } else {
             $page = isset($_GET["page"]) ? $_GET["page"] : 1;
             $pageCount = ceil(count($allProduct) / 12);
