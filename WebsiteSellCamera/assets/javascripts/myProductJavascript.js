@@ -44,6 +44,8 @@ $(document).ready(function () {
     $("#productQuantity").change(function () {
         if ($(this).val() <= 0) {
             $(this).val(1);
+        } else if ($(this).val() > parseInt($(this).attr("max"))) {
+            $(this).val($(this).attr("max"));
         }
     });
 
@@ -57,8 +59,10 @@ $(document).ready(function () {
 
     $("#increase").click(function () {
         $temp = parseInt($("#productQuantity").val());
-        $temp++;
-        $("#productQuantity").val($temp);
+        if ($temp < parseInt($("#productQuantity").attr("max"))) {
+            $temp++;
+            $("#productQuantity").val($temp);
+        }
     });
 
     $("#carousel-similar").on("slide.bs.carousel", function () {
