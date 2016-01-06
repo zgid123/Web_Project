@@ -1,10 +1,24 @@
 $(document).ready(function () {
     var pos = 300; // position to show the back-to-top button
+    var top = $("#top").offset().top + $("#top").height();
+
     $(window).scroll(function () {
         if ($(this).scrollTop() > pos)
             $("#back-to-top").fadeIn("slow");
         else
             $("#back-to-top").fadeOut("fast");
+
+        if ($(this).scrollTop() >= top) {
+            $("#search-bar-form").css({
+                position: "fixed",
+                top: 0
+            });
+        } else {
+            $("#search-bar-form").css({
+                position: "relative",
+                top: 0
+            });
+        }
     });
 
     $("#back-to-top").click(function (e) {

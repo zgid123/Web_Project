@@ -98,20 +98,6 @@
                 ?>
             </div>
         </form>
-
-        <!--        <form id="search" class="navbar-form row">
-                    <div class="form-group col-md-offset-3 col-lg-offset-3">
-        
-        
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Tìm kiếm..." id="searchBar" name="searchBar" />
-                            <span class="input-group-addon"><a href="?action=search" class="fa fa-search fa-lg"></a></span>
-                        </div>
-                        <div class="input-group">
-        
-                        </div>
-                    </div>
-                </form>-->
     </div>
 </nav>
 

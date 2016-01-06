@@ -72,7 +72,7 @@ $(document).ready(function () {
     });
 
     // Jquery for div similarProduct, product and content
-    $("#similarProduct button.addCart, #product button.addCart, #content button.addCart").click(function () {
+    $("#similarProduct button.addCart, #product button.addCart, #content button.addCart").on("click", function () {
         $("#IDProduct").val($(this).attr("data"));
         $("#QuantityProduct").val(1);
         $("#cart>#Method").val("Add");
@@ -109,7 +109,7 @@ $(document).ready(function () {
     });
 
     // Jquery for all Page
-    $(".product").mousemove(function () {
+    $(".product").on("mousemove", function () {
         var btnDetail = $(this).children(".btnDetail");
         var img = $(this).children(".productImg");
         var top = img.position().top + img.height() / 2;
@@ -121,11 +121,11 @@ $(document).ready(function () {
         });
     });
 
-    $(".product").mouseout(function () {
+    $(".product").on("mouseout", function () {
         $(this).children(".btnDetail").hide();
     });
 
-    $(".productName").mouseenter(function () {
+    $(".productName").on("mouseenter", function () {
         var $this = $(this).children();
         if ($this[0].scrollWidth > $this.width())
             $this.animate({
@@ -133,7 +133,7 @@ $(document).ready(function () {
             }, 700);
     });
 
-    $(".productName").mouseleave(function () {
+    $(".productName").on("mouseleave", function () {
         var $this = $(this).children();
         $this.animate({
             right: 0

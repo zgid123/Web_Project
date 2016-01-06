@@ -2,6 +2,7 @@
 #detail>.panel-body{
     padding: 0px;
     border: 0px;
+    background-color: rgba(255, 255, 255, 0.97);
 }
 
 #detail .panel-heading{
@@ -9,7 +10,7 @@
 }
 
 #detail .panel-title{
-    background-color: #538cc5;
+    background-color: #ff8080;
     font-size: 30px;
     text-align: justify;
     margin-bottom: 15px;
@@ -63,12 +64,12 @@
 
 #similarProduct>.list-group-item.content{
     padding: 10px 0px 10px 0px;
-    background-color: lightgray;
+    background-color: #262626;
 }
 
 #similarProduct>.list-group-item.title{
     font-size: 25px;
-    background-color: #538cc5;
+    background-color: #ff8080;
     text-align: left;
 }
 
@@ -79,7 +80,7 @@
 
 #similarProduct>.list-group-item.title .badge:hover, #similarProduct>.list-group-item.title .badge:active, *
 #similarProduct>.list-group-item.title .badge:visited, #similarProduct>.list-group-item.title .badge>i{
-    color: #538cc5;
+    color: #ff8080;
 }
 
 #similarProduct div.product{
@@ -87,12 +88,12 @@
     width: 193.156px;
     border: 3px solid;
     border-radius: 3px;
-    border-color: #006666;
+    border-color: rgba(209, 209, 209, 0.2);
     padding: 20px 5px 20px 5px;
     height: 350px;
     font-size: 18px;
-    background-color: white;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.97);
 }
 
 #similarProduct div.product>.productImg{

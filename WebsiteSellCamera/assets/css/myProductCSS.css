@@ -2,6 +2,15 @@
 #product>.panel-body{
     border: 0px;
     padding: 0px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+#product>.panel-heading{
+    background-color: #ff8080;
+    font-weight: bold;
+    color: white;
+    font-size: 15px;
 }
 
 #product>.panel-body>.product{
@@ -13,6 +22,8 @@
     margin: 8px;
     width: 229px;
     height: 337px !important;
+    background-color: rgba(242, 242, 242, 0.4);
+    border-color: rgba(209, 209, 209, 0.2);
 }
 
 #product>.panel-body>.product>.productName{
