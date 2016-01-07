@@ -38,7 +38,7 @@ class Series {
         $this->SeriesName = $name;
     }
 
-    public static function getSeries($query = "Select SeriesID, SeriesName From series") {
+    public static function getSeries($query = "Select SeriesID, SeriesName From series Where IsRemoved = 0") {
         $result = array();
 
         $series = DataProvider::ExecuteQuery($query);

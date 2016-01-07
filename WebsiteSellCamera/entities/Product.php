@@ -15,7 +15,7 @@ require_once 'Utils/DataProvider.php';
 
 class Product {
 
-    var $ProID, $ProName, $URL, $TinyDes, $FullDes, $Price, $Quantity, $Bought, $Viewed, $UploadDate, $CatID, $ManufacturerID, $MadeIn;
+    var $ProID, $ProName, $URL, $TinyDes, $FullDes, $Price, $Quantity, $Bought, $Viewed, $UploadDate, $CatID, $ManufacturerID, $MadeIn, $IsRemoved;
 
     public function getProID() {
         return $this->ProID;
@@ -67,6 +67,10 @@ class Product {
 
     public function getMadeIn() {
         return $this->MadeIn;
+    }
+
+    public function getIsRemoved() {
+        return $this->IsRemoved;
     }
 
     public function setProID($id) {
@@ -121,7 +125,11 @@ class Product {
         $this->MadeIn = $madeIn;
     }
 
-    public function __construct($id, $name, $url, $tinyDes, $fullDes, $price, $quantity, $bought, $viewd, $uploadDate, $catID, $manufacturerID, $madeIn) {
+    public function setIsRemoved($status) {
+        $this->IsRemoved = $status;
+    }
+
+    public function __construct($id, $name, $url, $tinyDes, $fullDes, $price, $quantity, $bought, $viewd, $uploadDate, $catID, $manufacturerID, $madeIn, $status) {
         $this->ProID = $id;
         $this->ProName = $name;
         $this->URL = $url;
@@ -135,15 +143,16 @@ class Product {
         $this->CatID = $catID;
         $this->ManufacturerID = $manufacturerID;
         $this->MadeIn = $madeIn;
+        $this->IsRemoved = $status;
     }
 
-    public static function getProducts($query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn From products") {
+    public static function getProducts($query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn From products Where IsRemoved = 0") {
         $result = array();
 
         $products = DataProvider::ExecuteQuery($query);
 
         while ($row = $products->fetch_assoc()) {
-            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"]));
+            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"], 0));
         }
 
         return $result;
@@ -151,14 +160,14 @@ class Product {
 
     public static function getProductByID($proID) {
         $query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn "
-                . "From products Where ProID = $proID";
+                . "From products Where ProID = $proID And IsRemoved = 0";
         $product = null;
 
         $result = DataProvider::ExecuteQuery($query);
 
         if ($result) {
             if ($row = $result->fetch_assoc()) {
-                $product = new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"]);
+                $product = new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"], 0);
             }
         }
 
@@ -168,12 +177,12 @@ class Product {
     public static function getProductsByCatID($catID) {
         $result = array();
         $query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn "
-                . "From products Where CatID = $catID";
+                . "From products Where CatID = $catID And IsRemoved = 0";
 
         $products = DataProvider::ExecuteQuery($query);
 
         while ($row = $products->fetch_assoc()) {
-            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"]));
+            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"], 0));
         }
 
         return $result;
@@ -182,12 +191,12 @@ class Product {
     public static function getProductsByMFID($mfID) {
         $result = array();
         $query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn "
-                . "From products Where ManufacturerID = $mfID";
+                . "From products Where ManufacturerID = $mfID And IsRemoved = 0";
 
         $products = DataProvider::ExecuteQuery($query);
 
         while ($row = $products->fetch_assoc()) {
-            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"]));
+            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"], 0));
         }
 
         return $result;
@@ -196,12 +205,12 @@ class Product {
     public static function getProductsBySeriesID($seriesID) {
         $result = array();
         $query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn "
-                . "From products Where SeriesID = $seriesID";
+                . "From products Where SeriesID = $seriesID And IsRemoved = 0";
 
         $products = DataProvider::ExecuteQuery($query);
 
         while ($row = $products->fetch_assoc()) {
-            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"]));
+            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"], 0));
         }
 
         return $result;
@@ -213,8 +222,8 @@ class Product {
         DataProvider::ExecuteQuery($query);
     }
 
-    public static function updateProductBought($proID) {
-        $query = "Update products Set Bought = Bought + 1 Where ProID = $proID";
+    public static function updateProductBought($proID, $quantity) {
+        $query = "Update products Set Bought = Bought + $quantity, Quantity = Quantity - $quantity Where ProID = $proID";
 
         DataProvider::ExecuteQuery($query);
     }
@@ -222,14 +231,14 @@ class Product {
     public static function get5ProductsByMFID($mfID, $proID) {
         $result = array();
         $query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn "
-                . "From products Where ManufacturerID = $mfID And ProID <> $proID "
+                . "From products Where ManufacturerID = $mfID And ProID <> $proID And IsRemoved = 0 "
                 . "Order by rand() "
                 . "Limit 5";
 
         $products = DataProvider::ExecuteQuery($query);
 
         while ($row = $products->fetch_assoc()) {
-            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"]));
+            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"], 0));
         }
 
         return $result;
@@ -238,14 +247,14 @@ class Product {
     public static function get5ProductsByCatID($catID, $proID) {
         $result = array();
         $query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn "
-                . "From products Where CatID = $catID And ProID <> $proID "
+                . "From products Where CatID = $catID And ProID <> $proID And IsRemoved = 0 "
                 . "Order by rand() "
                 . "Limit 5";
 
         $products = DataProvider::ExecuteQuery($query);
 
         while ($row = $products->fetch_assoc()) {
-            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"]));
+            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"], 0));
         }
 
         return $result;
@@ -286,6 +295,42 @@ class Product {
                 . "From products "
                 . "Where ProName Like '%$proName%' And CatID Like Case $catID When 0 Then '%' Else $catID End "
                 . "And ManufacturerID Like Case $mfID When 0 Then '%' Else $mfID End "
+                . "And Price >= ifnull($minPrice, 0) And IsRemoved = 0 ";
+
+        if ($maxPrice != null) {
+            $query .= "And Price <= $maxPrice ";
+        }
+
+        $query .= "Order by Price ASC";
+
+        $result = array();
+
+        $products = DataProvider::ExecuteQuery($query);
+
+        while ($row = $products->fetch_assoc()) {
+            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"], 0));
+        }
+
+        return $result;
+    }
+
+    public static function getProductsForAdmin($query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn, IsRemoved From products") {
+        $result = array();
+
+        $products = DataProvider::ExecuteQuery($query);
+
+        while ($row = $products->fetch_assoc()) {
+            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"], $row["IsRemoved"]));
+        }
+
+        return $result;
+    }
+
+    public static function getProductsBySearchingForAdmin($proName, $catID, $mfID, $minPrice, $maxPrice) {
+        $query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn, IsRemoved "
+                . "From products "
+                . "Where ProName Like '%$proName%' And CatID Like Case $catID When 0 Then '%' Else $catID End "
+                . "And ManufacturerID Like Case $mfID When 0 Then '%' Else $mfID End "
                 . "And Price >= ifnull($minPrice, 0) ";
 
         if ($maxPrice != null) {
@@ -299,10 +344,22 @@ class Product {
         $products = DataProvider::ExecuteQuery($query);
 
         while ($row = $products->fetch_assoc()) {
-            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"]));
+            array_push($result, new Product($row["ProID"], $row["ProName"], $row["URL"], $row["TinyDes"], $row["FullDes"], $row["Price"], $row["Quantity"], $row["Bought"], $row["Viewed"], $row["UploadDate"], $row["CatID"], $row["ManufacturerID"], $row["MadeIn"], $row["IsRemoved"]));
         }
 
         return $result;
+    }
+
+    public static function removeProduct($proID) {
+        $query = "Update products Set IsRemoved = 1 Where ProID = $proID";
+
+        DataProvider::ExecuteQuery($query);
+    }
+
+    public static function restoreProduct($proID) {
+        $query = "Update products Set IsRemoved = 0 Where ProID = $proID";
+
+        DataProvider::ExecuteQuery($query);
     }
 
 }

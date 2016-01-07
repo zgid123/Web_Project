@@ -35,6 +35,7 @@ class Provider {
 
                 $_SESSION["Username"] = $u->getUsername();
                 $_SESSION["UserID"] = $u->getID();
+                $_SESSION["Permission"] = $u->getPermission();
 
                 $result = true;
             }

@@ -167,10 +167,13 @@
                             <label><i class="fa fa-angle-double-right"></i></label>
                         </a>
                     </li>
-                </ul>
-            </div>
-            <?php
-        }
+
+                    <?php
+                }
+                ?>
+            </ul>
+        </div>
+        <?php
     }
     ?>
 </div>

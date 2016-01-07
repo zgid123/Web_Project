@@ -1,0 +1,111 @@
+.panel-heading{
+    background-color: #640099;
+    color: white;
+    padding: 15px 15px 19px 15px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.panel-body{
+    z-index: 2;
+    margin-top: -5px;
+    margin-bottom: 0px;
+}
+
+#product>.panel-body>.pagination{
+    margin: 0px;
+}
+
+.pagination>li>a>label{
+    margin: 0px;
+    width: 8px !important;
+    height: 20px !important;
+    text-align: center;
+}
+
+.pagination>li>a>label>i{
+    -webkit-transform: translateY(20%);
+    -ms-transform: translateY(20%);
+    transform: translateY(20%);
+}
+
+.pagination{
+    margin: 20px 20px 5px 20px;
+}
+
+#product #search-bar-form{
+    background-color: white;
+    padding: 5px 0px 5px 0px;
+    margin: 0px;
+    text-align: center;
+    z-index: 2;
+}
+
+#product #search-bar-form .nav-pills{
+    background-color: white !important;
+}
+
+#product #search-bar-form .nav-pills>li{
+    margin: 0px 13px 0px 4px;
+}
+
+#product #search-bar-form label{
+    margin: 0px;
+}
+
+#product #search-bar-form>ul>li>label{
+    font-size: 20px;
+    -webkit-transform: translateY(13%);
+    -ms-transform: translateY(13%);
+    transform: translateY(13%);
+}
+
+#product #search-bar-form>ul>li>select{
+    padding: 6px 12px 6px 12px;
+    -webkit-transform: translateY(5%);
+    -ms-transform: translateY(5%);
+    transform: translateY(5%);
+}
+
+#product #search-bar-form>ul>li>a{
+    padding: 6px 11px 6px 11px;
+    color: #337ab7;
+    background-color: rgba(242, 242, 242, 0.5);
+}
+
+#product #search-bar-form>ul>li>a:hover, #search-bar-form>ul>li>a:visited{
+    background-color: rgba(242, 242, 242, 0.5) !important;
+}
+
+#product #search-bar-form .tinySpace{
+    margin: 0px 4px 0px -7px !important;
+}
+
+#product #content img{
+    height: 50px;
+    width: 50px;
+}
+
+#product #content>thead>tr>th{
+    text-align: center !important;
+    font-size: 18px;
+}
+
+#product #content>tbody>tr>td{
+    text-align: center !important;
+    vertical-align: middle;
+}
+
+#paging>.navbar-right{
+    display: inline-block;
+    margin: 0px !important;
+}
+
+#paging>.navbar-right>i{
+    margin-left: 10px;
+    -webkit-transform: translateY(53%);
+    -ms-transform: translateY(53%);
+    transform: translateY(53%);
+}
