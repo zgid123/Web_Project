@@ -4,6 +4,8 @@
 
 #cart-form>.panel.panel-primary>.panel-heading{
     font-size: 30px;
+    background-color: #ff8080;
+    border: 0px;
 }
 
 #cart-form>.panel.panel-primary>#cart-form-title.panel-body{
@@ -35,16 +37,16 @@
 }
 #cart-form>.panel.panel-primary>.panel-body>.content>.cart-text{
     position: relative;
-    -webkit-transform: translateY(70%);
-    -ms-transform: translateY(70%);
-    transform: translateY(70%);
+    -webkit-transform: translateY(73%);
+    -ms-transform: translateY(73%);
+    transform: translateY(73%);
 }
 
 .cart-numericUpDown{
     position: relative;
-    -webkit-transform: translateY(-47%);
-    -ms-transform: translateY(-47%);
-    transform: translateY(-47%);
+    -webkit-transform: translateY(-52%);
+    -ms-transform: translateY(-52%);
+    transform: translateY(-52%);
 }
 
 .cart-numericUpDown button{
@@ -59,9 +61,9 @@
 
 #cart-form .btn-remove{
     position: relative;
-    -webkit-transform: translateY(50%);
-    -ms-transform: translateY(50%);
-    transform: translateY(50%); 
+    -webkit-transform: translateY(63%);
+    -ms-transform: translateY(63%);
+    transform: translateY(63%); 
 }
 
 #cart-form div.content:hover{

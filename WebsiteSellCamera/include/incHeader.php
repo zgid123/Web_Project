@@ -1,5 +1,18 @@
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
+        <?php
+        if (isset($_SESSION["Permission"]) && $_SESSION["Permission"] == 1) {
+            ?>
+            <div class="navbar-brand">
+                <div class="form-group">
+                    <a class="btn btn-warning btn-lg" href="admin.php">
+                        <i class="fa fa-modx"></i>&emsp;Dashboard
+                    </a>
+                </div>
+            </div>
+            <?php
+        }
+        ?>
         <form id="cart" method="post" name="cart">
             <input id="IDProduct" name="IDProduct" type="hidden" />
             <input id="QuantityProduct" name="QuantityProduct" type="hidden" />

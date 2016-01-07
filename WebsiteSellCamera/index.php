@@ -60,6 +60,8 @@ and open the template in the editor.
                 $detail = new OrderDetail(-1, $order->getOrderID(), $proID, $Quantity, $price, $amount);
 
                 $detail->insert();
+
+                Product::updateProductBought($proID, $Quantity);
             }
 
             Cart::destroyCart();
@@ -91,6 +93,7 @@ and open the template in the editor.
                 if ($result) {
                     $_SESSION["Username"] = $u->getUsername();
                     $_SESSION["UserID"] = $u->getID();
+                    $_SESSION["Permission"] = $u->getPermission();
 
                     $expire = time() + 15 * 24 * 60 * 60;
                     setcookie("Username", $username, $expire);

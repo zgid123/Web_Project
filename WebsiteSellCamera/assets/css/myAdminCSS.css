@@ -1,0 +1,65 @@
+body{
+    background-color: #262626;
+}
+
+/* CSS for Header */
+.navbar-inverse{
+    background-color: #232323 !important;
+    border-radius: inherit;
+}
+
+.navbar-brand{
+    padding: 9px 15px 0px 15px;
+    margin: 0px 0px 0px 20px !important;
+    text-align: center;
+}
+
+.navbar-brand>.form-group{
+    margin: 0px;
+}
+
+.navbar-brand>.form-group>a{
+    padding: 4px 20px 4px 20px;
+    border: 0px;
+    border-radius: 10px;
+    background-color: #373737;
+}
+
+.navbar-brand>.form-group>a:hover{
+    background-color: #f0ad4e;
+}
+
+.navbar-inverse>.container-fluid>ul>li>a{
+    font-size: 18px;
+}
+
+body>.row{
+    margin: 20px 15px 20px 15px;
+    padding: 15px;
+}
+
+.redColor{
+    color: red;
+}
+
+.greenColor{
+    color: green;
+}
+
+.whiteColor{
+    color: white;
+}
+
+.btn-xs{
+    height: 22px;
+}
+
+.btn-xs>i{
+    width: 9.438px;
+}
+
+a.btn-xs>i{
+    -webkit-transform: translateY(21%);
+    -ms-transform: translateY(21%);
+    transform: translateY(21%);
+}

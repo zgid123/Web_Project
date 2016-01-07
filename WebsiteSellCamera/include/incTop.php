@@ -8,7 +8,7 @@
     for ($i = 0; $i < count($catList); $i++) {
         ?>
         <li>
-            <a id="compactCamera" class="" href="?catID=<?php echo $catList[$i]->getCatID(); ?>">
+            <a id="" class="" href="?catID=<?php echo $catList[$i]->getCatID(); ?>">
                 Máy ảnh <?php echo $catList[$i]->getCatName(); ?>
             </a>
         </li>
