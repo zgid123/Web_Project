@@ -11,7 +11,7 @@
                     <?php
                     require_once 'entities/Product.php';
 
-                    $productList = Product::getProducts("Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn From products Order by UploadDate DESC Limit 10");
+                    $productList = Product::getProducts("Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn From products Where IsRemoved = 0 Order by UploadDate DESC Limit 10");
                     for ($i = 0; $i < count($productList) / 2; $i++) {
                         $soldout = $productList[$i]->getQuantity() > 0 ? false : true;
                         ?>
@@ -92,7 +92,7 @@
             <div class="carousel-inner">
                 <div class="item active">
                     <?php
-                    $topSellList = Product::getProducts("Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn From products Order by Bought DESC Limit 10");
+                    $topSellList = Product::getProducts("Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn From products Where IsRemoved = 0 Order by Bought DESC Limit 10");
                     for ($i = 0; $i < count($topSellList) / 2; $i++) {
                         $soldout = $topSellList[$i]->getQuantity() > 0 ? false : true;
                         ?>
@@ -179,7 +179,7 @@
             <div class="carousel-inner">
                 <div class="item active">
                     <?php
-                    $topViewList = Product::getProducts("Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn From products Order by Viewed DESC Limit 10");
+                    $topViewList = Product::getProducts("Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn From products Where IsRemoved = 0 Order by Viewed DESC Limit 10");
                     for ($i = 0; $i < count($topViewList) / 2; $i++) {
                         $soldout = $topViewList[$i]->getQuantity() > 0 ? false : true;
                         ?>

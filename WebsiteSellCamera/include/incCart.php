@@ -85,7 +85,7 @@ $total = 0;
                     <div class="col-md-1">
                         <button type="button" class="btn btn-danger btn-xs btn-remove" title="Xoá" name="cart-remove" 
                                 data-proid="<?php echo $proID; ?>">
-                            <i class="fa fa-remove"></i>
+                            <i class="fa fa-trash"></i>
                         </button>
                     </div>
                 </div>

@@ -38,7 +38,7 @@ class Category {
         $this->CatName = $name;
     }
 
-    public static function getCategory($query = "Select CatID, CatName From category") {
+    public static function getCategory($query = "Select CatID, CatName From category Where IsRemoved = 0") {
         $result = array();
 
         $category = DataProvider::ExecuteQuery($query);

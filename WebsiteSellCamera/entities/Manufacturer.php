@@ -38,7 +38,7 @@ class Manufacturer {
         $this->ManufacturerName = $name;
     }
 
-    public static function getManufacturer($query = "Select ManufacturerID, ManufacturerName From manufacturer") {
+    public static function getManufacturer($query = "Select ManufacturerID, ManufacturerName From manufacturer Where IsRemoved = 0") {
         $result = array();
 
         $manufacturer = DataProvider::ExecuteQuery($query);
