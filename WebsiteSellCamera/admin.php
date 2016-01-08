@@ -108,7 +108,7 @@ and open the template in the editor.
                     }
                 }
             } else {
-                $error = "File không hợp lệ. Chỉ được upload file gif, jpg, png và dung lượng dưới 1MB";
+                $URL = "";
             }
 
             if (!isset($error)) {
