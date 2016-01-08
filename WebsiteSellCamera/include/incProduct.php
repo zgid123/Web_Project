@@ -9,7 +9,7 @@
             if ($_GET["action"] == "product") {
                 $allProduct = Product::getProducts();
             } else if ($_GET["action"] == "search") {
-                if (!isset($_GET["page"])) {
+                if (isset($_POST["search-proName"])) {
                     $proName = isset($_POST["search-proName"]) ? $_POST["search-proName"] : "";
                     $catID = $_POST["search-catID"] !== "" ? $_POST["search-catID"] : 0;
                     $mfID = $_POST["search-mfID"] !== "" ? $_POST["search-mfID"] : 0;
