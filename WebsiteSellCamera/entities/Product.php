@@ -168,7 +168,7 @@ class Product {
 
     public static function getProductByID($proID) {
         $query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn "
-                . "From products Where ProID = $proID And IsRemoved = 0";
+                . "From products Where ProID = $proID";
         $product = null;
 
         $result = DataProvider::ExecuteQuery($query);
