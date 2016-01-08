@@ -59,6 +59,10 @@ class Provider {
             unset($_COOKIE["Username"]);
             setcookie("Username", '', time() - 3600);
         }
+
+        if (isset($_SESSION["Permission"])) {
+            unset($_SESSION["Permission"]);
+        }
     }
 
 }
