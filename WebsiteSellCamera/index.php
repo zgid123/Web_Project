@@ -49,7 +49,7 @@ and open the template in the editor.
 
         if (isset($_POST["btnPay"])) {
             $total = $_POST["btnPay"];
-            $order = new Order(-1, time(), $_SESSION["UserID"], str_replace(",", "", $total));
+            $order = new Order(-1, time(), $_SESSION["UserID"], str_replace(",", "", $total), 0);
 
             $order->insert();
 

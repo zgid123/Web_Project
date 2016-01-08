@@ -387,8 +387,13 @@ class Product {
 
     public static function update($proID, $proName, $catID, $mfID, $price, $quantity, $madein, $fulldes, $url) {
         $query = "Update products "
-                . "Set ProName = '$proName', CatID = '$catID', ManufacturerID = '$mfID', Price = '$price', Quantity = '$quantity', MadeIn = '$madein', FullDes = '$fulldes', URL = '$url' "
-                . "Where ProID = $proID";
+                . "Set ProName = '$proName', CatID = '$catID', ManufacturerID = '$mfID', Price = '$price', Quantity = '$quantity', MadeIn = '$madein', FullDes = '$fulldes' ";
+
+        if ($url != "") {
+            $query .= ", URL = '$url' ";
+        }
+
+        $query .= "Where ProID = $proID";
 
         DataProvider::ExecuteQuery($query);
     }
