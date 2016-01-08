@@ -112,7 +112,7 @@ $pageCount = 0;
                     <th>Còn</th>
                     <th>Bán</th>
                     <th>Xem</th>
-                    <th>Trạng thái</th>
+                    <th>Xuất xứ</th>
                     <th>
                         <a href="?action=add-product" class="btn btn-success" title="Thêm mới" name="product-add">
                             Thêm sản phẩm
@@ -141,7 +141,7 @@ $pageCount = 0;
                                 <td><?php echo $i + 1 ?></td>
                                 <td><img class="img-responsive" src="<?php echo $allProduct[$i]->getURL(); ?>" /></td>
                                 <td><?php echo $allProduct[$i]->getProName(); ?></td>
-                                <td><?php echo $allProduct[$i]->getPrice(); ?></td>
+                                <td><?php echo number_format($allProduct[$i]->getPrice()); ?></td>
                                 <td>
                                     <?php echo Category::getCategoryByID($allProduct[$i]->getCatID())->getCatName(); ?>
                                 </td>
@@ -152,9 +152,7 @@ $pageCount = 0;
                                 <td><?php echo $allProduct[$i]->getBought(); ?></td>
                                 <td><?php echo $allProduct[$i]->getViewed(); ?></td>
                                 <td>
-                                    <span class="<?php echo $soldout === true ? "redColor" : "greenColor"; ?>">
-                                        <?php echo $soldout === true ? "Hết hàng" : "Còn hàng"; ?>
-                                    </span>
+                                    <?php echo $allProduct[$i]->getMadeIn(); ?>
                                 </td>
                                 <td>
                                     <a class="btn btn-warning btn-xs" title="Sửa" name="product-edit" 
@@ -208,9 +206,7 @@ $pageCount = 0;
                                 <td><?php echo $allProduct[$i]->getBought(); ?></td>
                                 <td><?php echo $allProduct[$i]->getViewed(); ?></td>
                                 <td>
-                                    <span class="<?php echo $soldout === true ? "redColor" : "greenColor"; ?>">
-                                        <?php echo $soldout === true ? "Hết hàng" : "Còn hàng"; ?>
-                                    </span>
+                                    <?php echo $allProduct[$i]->getMadeIn(); ?>
                                 </td>
                                 <td>
                                     <a href="?pro=<?php echo $allProduct[$i]->getProID(); ?>" 

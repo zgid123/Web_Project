@@ -15,7 +15,7 @@ require_once 'Utils/DataProvider.php';
 
 class Product {
 
-    var $ProID, $ProName, $URL, $TinyDes, $FullDes, $Price, $Quantity, $Bought, $Viewed, $UploadDate, $CatID, $ManufacturerID, $MadeIn, $IsRemoved;
+    var $ProID, $ProName, $URL, $TinyDes, $FullDes, $Price, $Quantity, $SeriesID, $Bought, $Viewed, $UploadDate, $CatID, $ManufacturerID, $MadeIn, $IsRemoved;
 
     public function getProID() {
         return $this->ProID;
@@ -73,6 +73,10 @@ class Product {
         return $this->IsRemoved;
     }
 
+    public function getSeriesID() {
+        return $this->SeriesID;
+    }
+
     public function setProID($id) {
         $this->ProID = $id;
     }
@@ -127,6 +131,10 @@ class Product {
 
     public function setIsRemoved($status) {
         $this->IsRemoved = $status;
+    }
+
+    public function setSeriesID($series) {
+        $this->SeriesID = $series;
     }
 
     public function __construct($id, $name, $url, $tinyDes, $fullDes, $price, $quantity, $bought, $viewd, $uploadDate, $catID, $manufacturerID, $madeIn, $status) {
@@ -290,6 +298,21 @@ class Product {
         return $result;
     }
 
+    public static function getNameByProID($proID) {
+        $query = "Select ProName "
+                . "From products Where ProID = $proID";
+
+        $result = DataProvider::ExecuteQuery($query);
+
+        if ($result) {
+            if ($row = $result->fetch_assoc()) {
+                $result = $row["ProName"];
+            }
+        }
+
+        return $result;
+    }
+
     public static function getProductsBySearching($proName, $catID, $mfID, $minPrice, $maxPrice) {
         $query = "Select ProID, ProName, URL, TinyDes, FullDes, Price, Quantity, Bought, Viewed, UploadDate, CatID, ManufacturerID, MadeIn "
                 . "From products "
@@ -358,6 +381,24 @@ class Product {
 
     public static function restoreProduct($proID) {
         $query = "Update products Set IsRemoved = 0 Where ProID = $proID";
+
+        DataProvider::ExecuteQuery($query);
+    }
+
+    public static function update($proID, $proName, $catID, $mfID, $price, $quantity, $madein, $fulldes, $url) {
+        $query = "Update products "
+                . "Set ProName = '$proName', CatID = '$catID', ManufacturerID = '$mfID', Price = '$price', Quantity = '$quantity', MadeIn = '$madein', FullDes = '$fulldes', URL = '$url' "
+                . "Where ProID = $proID";
+
+        DataProvider::ExecuteQuery($query);
+    }
+
+    public static function insert($proName, $catID, $mfID, $price, $quantity, $madein, $fulldes, $url, $date) {
+        date_default_timezone_set("Asia/Ho_Chi_Minh");
+        $d = date('Y-m-d H:i:s', $date);
+
+        $query = "insert into products (ProName, CatID, ManufacturerID, Price, Quantity, MadeIn, FullDes, URL, UploadDate) "
+                . "values ('$proName', '$catID', '$mfID', '$price', '$quantity', '$madein', '$fulldes', '$url', '$d')";
 
         DataProvider::ExecuteQuery($query);
     }

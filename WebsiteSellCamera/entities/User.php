@@ -215,4 +215,19 @@ class User {
         return false;
     }
 
+    public static function getNameByUserID($userID) {
+        $query = "Select FirstName From users "
+                . "Where ID = '$userID'";
+
+        $name = DataProvider::ExecuteQuery($query);
+
+        $result = "";
+
+        if ($row = $name->fetch_assoc()) {
+            $result = $row["FirstName"];
+        }
+
+        return $result;
+    }
+
 }

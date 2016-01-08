@@ -27,6 +27,11 @@
     font-size: 25px;
 }
 
+#detail #productImg>.img-reponsive{
+    width: 160px;
+    height: 160px;
+}
+
 #detail #productInfor>#productNote .col-md-4{
     text-align: right;
 }

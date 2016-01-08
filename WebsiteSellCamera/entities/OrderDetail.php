@@ -82,4 +82,18 @@ class OrderDetail {
         DataProvider::ExecuteQuery($query);
     }
 
+    public static function getOrderDetailByOrderID($orderID) {
+        $query = "Select ID, OrderID, ProID, Quantity, Price, Amount From orderdetails Where OrderID = '$orderID'";
+
+        $result = array();
+
+        $detail = DataProvider::ExecuteQuery($query);
+
+        while ($row = $detail->fetch_assoc()) {
+            array_push($result, new OrderDetail($row["ID"], $row["OrderID"], $row["ProID"], $row["Quantity"], $row["Price"], $row["Amount"]));
+        }
+
+        return $result;
+    }
+
 }
