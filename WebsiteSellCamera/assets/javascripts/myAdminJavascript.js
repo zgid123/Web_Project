@@ -13,7 +13,7 @@ $("#search-bar-form #search-submit").click(function (e) {
 
 $("#search-bar-form #search-minPrice, #search-bar-form #search-maxPrice").number(true, 0);
 
-$("#content").on("click", "button[name='product-remove']", function () {
+$("#content").on("click", "button[name='product-remove'], button[name='cat-remove'], button[name='mf-remove'], button[name='order-delivered']", function () {
     var data = {};
 
     var url = $(location).attr('href');
@@ -33,7 +33,7 @@ $("#content").on("click", "button[name='product-remove']", function () {
     });
 });
 
-$("#content").on("click", "button[name='product-restore']", function () {
+$("#content").on("click", "button[name='product-restore'], button[name='cat-restore'], button[name='mf-restore'], button[name='order-undelivered']", function () {
     var data = {};
 
     var url = $(location).attr('href');
@@ -53,4 +53,6 @@ $("#content").on("click", "button[name='product-restore']", function () {
     });
 });
 
-
+$('.datepicker').datepicker({
+    format: 'dd/mm/yyyy'
+});

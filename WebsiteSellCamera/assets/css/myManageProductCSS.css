@@ -73,6 +73,9 @@
     padding: 6px 11px 6px 11px;
     color: #337ab7;
     background-color: rgba(242, 242, 242, 0.5);
+    -webkit-transform: translateY(15%);
+    -ms-transform: translateY(15%);
+    transform: translateY(15%);
 }
 
 #product #search-bar-form>ul>li>a:hover, #search-bar-form>ul>li>a:visited{

@@ -4,8 +4,8 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/E:/Study/Subject/Project/Web%20Programming%201/Project/WebsiteSellCamera/assets/javascripts/myAdminJavascript.js</file>
-            <file>file:/E:/Study/Subject/Project/Web%20Programming%201/Project/WebsiteSellCamera/AdminPage/incManageProduct.php</file>
-            <file>file:/E:/Study/Subject/Project/Web%20Programming%201/Project/WebsiteSellCamera/AdminPage/incModifyProduct.php</file>
+            <file>file:/E:/Study/Subject/Project/Web%20Programming%201/Project/WebsiteSellCamera/entities/Order.php</file>
+            <file>file:/E:/Study/Subject/Project/Web%20Programming%201/Project/WebsiteSellCamera/AdminPage/incManageOrder.php</file>
             <file>file:/E:/Study/Subject/Project/Web%20Programming%201/Project/WebsiteSellCamera/admin.php</file>
         </group>
     </open-files>

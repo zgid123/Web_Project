@@ -15,7 +15,7 @@ require_once 'Utils/DataProvider.php';
 
 class Category {
 
-    var $CatID, $CatName;
+    var $CatID, $CatName, $IsRemoved;
 
     public function getCatID() {
         return $this->CatID;
@@ -23,6 +23,14 @@ class Category {
 
     public function getCatName() {
         return $this->CatName;
+    }
+
+    public function getIsRemoved() {
+        return $this->IsRemoved;
+    }
+
+    public function setIsRemoved($status) {
+        $this->IsRemoved = $status;
     }
 
     public function setCatID($id) {
@@ -33,9 +41,10 @@ class Category {
         $this->CatName = $name;
     }
 
-    public function __construct($id, $name) {
+    public function __construct($id, $name, $status) {
         $this->CatID = $id;
         $this->CatName = $name;
+        $this->IsRemoved = $status;
     }
 
     public static function getCategory($query = "Select CatID, CatName From category Where IsRemoved = 0") {
@@ -44,7 +53,7 @@ class Category {
         $category = DataProvider::ExecuteQuery($query);
 
         while ($row = $category->fetch_assoc()) {
-            array_push($result, new Category($row["CatID"], $row["CatName"]));
+            array_push($result, new Category($row["CatID"], $row["CatName"], 0));
         }
 
         return $result;
@@ -58,10 +67,61 @@ class Category {
         $result = DataProvider::ExecuteQuery($query);
 
         if ($row = $result->fetch_assoc()) {
-            $category = new Category($row["CatID"], $row["CatName"]);
+            $category = new Category($row["CatID"], $row["CatName"], 0);
         }
 
         return $category;
+    }
+
+    public static function getCategoryForAdmin($query = "Select CatID, CatName, IsRemoved From category") {
+        $result = array();
+
+        $category = DataProvider::ExecuteQuery($query);
+
+        while ($row = $category->fetch_assoc()) {
+            array_push($result, new Category($row["CatID"], $row["CatName"], $row["IsRemoved"]));
+        }
+
+        return $result;
+    }
+
+    public static function getCategoryBySearching($catName) {
+        $result = array();
+
+        $query = "Select CatID, CatName, IsRemoved From category Where CatName Like '%$catName%'";
+
+        $category = DataProvider::ExecuteQuery($query);
+
+        while ($row = $category->fetch_assoc()) {
+            array_push($result, new Category($row["CatID"], $row["CatName"], $row["IsRemoved"]));
+        }
+
+        return $result;
+    }
+
+    public static function removeCategory($catID) {
+        $query = "Update category Set IsRemoved = 1 Where CatID = '$catID'";
+
+        DataProvider::ExecuteQuery($query);
+    }
+
+    public static function restoreCategory($catID) {
+        $query = "Update category Set IsRemoved = 0 Where CatID = '$catID'";
+
+        DataProvider::ExecuteQuery($query);
+    }
+
+    public static function insert($catName) {
+        $query = "insert into category (CatName) "
+                . "values ('$catName')";
+
+        DataProvider::ExecuteQuery($query);
+    }
+
+    public static function update($catID, $catName) {
+        $query = "Update category Set CatName = '$catName' Where CatID = '$catID'";
+
+        DataProvider::ExecuteQuery($query);
     }
 
 }
