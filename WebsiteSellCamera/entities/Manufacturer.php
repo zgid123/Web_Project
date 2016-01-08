@@ -15,7 +15,7 @@ require_once 'Utils/DataProvider.php';
 
 class Manufacturer {
 
-    var $ManufacturerID, $ManufacturerName;
+    var $ManufacturerID, $ManufacturerName, $IsRemoved;
 
     public function getMFID() {
         return $this->ManufacturerID;
@@ -23,6 +23,14 @@ class Manufacturer {
 
     public function getMFName() {
         return $this->ManufacturerName;
+    }
+
+    public function getIsRemoved() {
+        return $this->IsRemoved;
+    }
+
+    public function setIsRemoved($status) {
+        $this->IsRemoved = $status;
     }
 
     public function setMFID($id) {
@@ -33,9 +41,10 @@ class Manufacturer {
         $this->ManufacturerName = $name;
     }
 
-    public function __construct($id, $name) {
+    public function __construct($id, $name, $status) {
         $this->ManufacturerID = $id;
         $this->ManufacturerName = $name;
+        $this->IsRemoved = $status;
     }
 
     public static function getManufacturer($query = "Select ManufacturerID, ManufacturerName From manufacturer Where IsRemoved = 0") {
@@ -44,7 +53,7 @@ class Manufacturer {
         $manufacturer = DataProvider::ExecuteQuery($query);
 
         while ($row = $manufacturer->fetch_assoc()) {
-            array_push($result, new Manufacturer($row["ManufacturerID"], $row["ManufacturerName"]));
+            array_push($result, new Manufacturer($row["ManufacturerID"], $row["ManufacturerName"], 0));
         }
 
         return $result;
@@ -58,10 +67,48 @@ class Manufacturer {
         $result = DataProvider::ExecuteQuery($query);
 
         if ($row = $result->fetch_assoc()) {
-            $manufacturer = new Manufacturer($row["ManufacturerID"], $row["ManufacturerName"]);
+            $manufacturer = new Manufacturer($row["ManufacturerID"], $row["ManufacturerName"], 0);
         }
 
         return $manufacturer;
+    }
+
+    public static function getManufacturerForAdmin($query = "Select ManufacturerID, ManufacturerName, IsRemoved From manufacturer") {
+        $result = array();
+
+        $manufacturer = DataProvider::ExecuteQuery($query);
+
+        while ($row = $manufacturer->fetch_assoc()) {
+            array_push($result, new Manufacturer($row["ManufacturerID"], $row["ManufacturerName"], $row["IsRemoved"]));
+        }
+
+        return $result;
+    }
+
+    public static function removeManufacturer($mfID) {
+        $query = "Update manufacturer Set IsRemoved = 1 Where ManufacturerID = '$mfID'";
+
+        DataProvider::ExecuteQuery($query);
+    }
+
+    public static function restoreManufacturer($mfID) {
+        $query = "Update manufacturer Set IsRemoved = 0 Where ManufacturerID = '$mfID'";
+
+        DataProvider::ExecuteQuery($query);
+    }
+
+    public static function getManufacturerBySearching($mfName) {
+        $result = array();
+
+        $query = "Select ManufacturerID, ManufacturerName From manufacturer Where ManufacturerName Like '%$mfName%'";
+
+        $manufacturer = DataProvider::ExecuteQuery($query);
+
+        while ($row = $manufacturer->fetch_assoc()) {
+            array_push($result, new Manufacturer($row["ManufacturerID"], $row["ManufacturerName"], 0));
+        }
+
+        return $result;
     }
 
 }

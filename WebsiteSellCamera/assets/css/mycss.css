@@ -34,6 +34,11 @@ body>img{
     height: 160px;
 }
 
+.productImg>.img-reponsive{
+    height: 160px;
+    width: 160px;
+}
+
 .img-soldout{
     position: absolute;
     padding: 0px 0px 0px 5px;

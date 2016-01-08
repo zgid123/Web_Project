@@ -8,6 +8,10 @@
     border: 0px;
 }
 
+#cart-form #cart-form-content .img-responsive{
+    height: 48.984px !important;
+}
+
 #cart-form>.panel.panel-primary>#cart-form-title.panel-body{
     padding: 15px 12px 0px 12px;
 }
