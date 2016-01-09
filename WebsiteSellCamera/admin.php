@@ -1,5 +1,11 @@
 <?php
 session_start();
+
+require_once 'Utils/Provider.php';
+
+if (!Provider::IsLogged() || $_SESSION["Permission"] != 1) {
+    Provider::Redirect("index.php");
+}
 ?>
 
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
